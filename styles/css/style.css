@@ -1,0 +1,19 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+ul a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+}
