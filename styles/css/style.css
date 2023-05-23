@@ -224,6 +224,14 @@ ul a {
 }
 .cardsSectionContainer .cardsContainer .card .card__img {
   max-width: 80%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cardsSectionContainer .cardsContainer .card .card__icon {
+  color: #39803c;
+  font-size: 1.3em;
+  padding-right: 6px;
 }
 .cardsSectionContainer .cardsContainer .card--left {
   margin-right: 20px;
