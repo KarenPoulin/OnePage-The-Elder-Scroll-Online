@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+@import 'variables'
+@import 'grid'
 
-$-red: #ce3434
-$-blue: #317fb0
-$-green: #39803c
-$-beige: #ecc690
-$-gold: #dfb862
+@mixin displayFlexProperties($direction: column, $justify: flex-start, $alignItems: stretch, $alignContent: normal)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $alignItems
+    align-content: $alignContent
 
 *
     color: white
@@ -41,26 +42,25 @@ $-gold: #dfb862
     margin: 4rem
     max-width: 1600px
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, p
     margin: 10px auto
     padding: 0
-    font-family: 'Cormorant Garamond', serif
+
+h1, h2, h3, h4, h5, h6
+    font-family: $-primary-font
     font-weight: 700
 
 p
-    margin: 10px auto
-    padding: 0
-    font-family: 'Lato', sans-serif
+    font-family: $-secondary-font
     font-size: 14px
     font-weight: 300
     line-height: 1.5em
 
 header
-    background-color: #151212
+    background-color: $-dark-brown
 
 ul
-    display: flex
-    flex-direction: row
+    @include displayFlexProperties(row)
     list-style-type: none
     a
         padding-left: 1.5rem
@@ -71,10 +71,7 @@ ul
         color: $-gold
 
 .navigation
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: center
+    @include displayFlexProperties(row, space-between, center)
     margin: 0 8rem 4rem 8rem
     padding: 0.75rem 0
     max-width: 1600px
@@ -86,19 +83,13 @@ ul
     text-align: center
 
 #formNewsletter
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
+    @include displayFlexProperties(row, center, center)
 
-.banner__background-black
-    background-color: black
+.banner__background
+    background-color: $-dark-brown
 
 .banner
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
+    @include displayFlexProperties(row, center, center)
     padding: 20px 20px 0 20px
 
     img
@@ -109,97 +100,38 @@ ul
         padding: 10px 30px
 
 .btn
-    background-color: brown
+    background-color: $-green
     color: white
     padding: 10px
     margin: 10px
-    border: white 1px solid
+    border: $-primary-border
     text-align: center
     text-decoration: none
-    font-family: 'Cormorant Garamond', serif
+    font-family: $-primary-font
     
 
 .presentationSection
-    display: flex
-    flex-direction: column
+    @include displayFlexProperties(column)
     text-align: center
 
 .presentationSection__3col
-    display: flex
-    flex-direction: row
-    align-items: baseline
+    @include displayFlexProperties(row, flex-start, baseline)
 
     .column
-        display: flex
-        flex-direction: column
+        @include displayFlexProperties(column)
         padding: 10px 30px
 
-.gridContainer
-    display: grid
-    grid-template-columns: 1.3fr 1fr 1.3fr 1fr 1fr
-    grid-template-rows: 3fr 1fr 1fr 3fr 3fr 1fr 1fr 3fr
-    gap: 20px 14px
 
-    .gridContainer__image1
-        grid-column: 1 / span 1
-        grid-row: 3 / span 3
-        height: 100%
-        width: 100%
-        object-fit: cover
-        border: $-gold 2px solid
-
-    .gridContainer__image2
-        grid-column: 2 / span 2
-        grid-row: 1 / span 4
-        height: 100%
-        width: 100%
-        object-fit: cover
-        border: $-gold 2px solid
-
-    .gridContainer__image3
-        grid-column: 4 / 5
-        grid-row: 2 / span 3
-        height: 100%
-        width: 100%
-        object-fit: cover
-        border: $-gold 2px solid
-
-    .gridContainer__image4
-        grid-column: 2 / 3
-        grid-row: 5 / span 3
-        height: 100%
-        width: 100%
-        object-fit: cover
-        border: $-gold 2px solid
-
-    .gridContainer__image5
-        grid-column: 5 / 6
-        grid-row: 4 / span 3
-        height: 100%
-        width: 100%
-        object-fit: cover
-        border: $-gold 2px solid
-        
-    .gridContainer__image6
-        grid-column: 3 / span 2
-        grid-row: 5 / span 4
-        height: 100%
-        width: 100%
-        object-fit: cover
-        border: $-gold 2px solid
         
 .statsContainer
-    display: flex
-    flex-direction: row
-    justify-content: space-between
+    @include displayFlexProperties(row, space-between)
 
     img
         max-width: 40%
         margin-right: 20px
 
     .statsNumberContainer
-        display: flex
-        flex-direction: row
+        @include displayFlexProperties(row)
         margin: 20px 0
 
         .statsNumberContainer--right
@@ -210,23 +142,18 @@ ul
         font-size: 2em
 
 
+
 .cardsSectionContainer
-    display: flex
-    flex-direction: column
-    justify-content: center
+    @include displayFlexProperties(column, center)
     margin-top: 20px
     margin-bottom: 20px
 
     .cardsContainer
-        display: flex
-        flex-direction: row
-        justify-content: space-between
+        @include displayFlexProperties(row, space-between)
         margin-top: 10px
 
         .card
-            display: flex
-            flex-direction: column
-            align-items: center
+            @include displayFlexProperties(column, flex-start, center)
             margin-top: 10px
 
             .card__img
