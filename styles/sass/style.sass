@@ -111,14 +111,15 @@ ul
     
 
 .presentationSection
-    @include displayFlexProperties(column)
+    @include displayFlexProperties()
     text-align: center
 
+
 .presentationSection__3col
-    @include displayFlexProperties(row, flex-start, baseline)
+    @include displayFlexProperties($direction: row, $alignItems:baseline)
 
     .column
-        @include displayFlexProperties(column)
+        @include displayFlexProperties()
         padding: 10px 30px
 
 
@@ -142,9 +143,8 @@ ul
         font-size: 2em
 
 
-
 .cardsSectionContainer
-    @include displayFlexProperties(column, center)
+    @include displayFlexProperties($justify: center)
     margin-top: 20px
     margin-bottom: 20px
 
@@ -153,7 +153,7 @@ ul
         margin-top: 10px
 
         .card
-            @include displayFlexProperties(column, flex-start, center)
+            @include displayFlexProperties($alignItems: center)
             margin-top: 10px
 
             .card__img
