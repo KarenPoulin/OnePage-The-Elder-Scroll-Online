@@ -8,11 +8,8 @@
     align-items: $alignItems
     align-content: $alignContent
 
-*
-    color: white
-
 .background--opacity
-    background-color: #0000008c
+    background-color: #0000009a
     min-height: 100%
     width: 80%
     z-index: -1
@@ -42,19 +39,21 @@
     margin: 4rem
     max-width: 1600px
 
-h1, h2, h3, h4, h5, h6, p
-    margin: 10px auto
-    padding: 0
-
 h1, h2, h3, h4, h5, h6
+    margin: 20px auto 6px
+    padding: 0
     font-family: $-primary-font
     font-weight: 700
+    color: $-gold
+    
 
 p
     font-family: $-secondary-font
     font-size: 14px
     font-weight: 300
     line-height: 1.5em
+    margin: 8px auto 4px
+    color: white
 
 header
     background-color: $-dark-brown
@@ -81,6 +80,12 @@ ul
 
 .newsletterSection
     text-align: center
+    max-width: 1600px
+    margin-bottom: 1rem
+
+.newsletter__text
+    max-width: 50%
+    font-size: 0.6em
 
 #formNewsletter
     @include displayFlexProperties(row, center, center)
@@ -110,6 +115,8 @@ ul
     font-family: $-primary-font
     
 
+
+
 .presentationSection
     @include displayFlexProperties()
     text-align: center
@@ -122,8 +129,21 @@ ul
         @include displayFlexProperties()
         padding: 10px 30px
 
+.presentation__title 
+    letter-spacing: 1px
+    font-size: 2em
+    text-transform: uppercase
+    
+.presentation__subtitle
+    font-size: 1.2em
 
+.presentation__textContainer
+    max-width: 50%
         
+
+
+
+
 .statsContainer
     @include displayFlexProperties(row, space-between)
 
@@ -138,9 +158,20 @@ ul
         .statsNumberContainer--right
             padding-left: 40px
 
-    .statsNumber__numbers
+    .stats__numbers
         font-weight: 700
-        font-size: 2em
+        font-size: 2.5em
+        color: $-blue
+        margin-bottom: -0.2em
+
+    .stats__text
+        margin: 0 auto 4px
+
+.stats__title
+    font-size: 1.5em
+    letter-spacing: 1px
+
+    
 
 
 .cardsSectionContainer
@@ -148,13 +179,32 @@ ul
     margin-top: 20px
     margin-bottom: 20px
 
+    .cards__title
+        font-size: 1.3em
+        letter-spacing: 1px
+        text-transform: uppercase
+
+    .cards__text
+        text-align: center
+        max-width: 60%
+
     .cardsContainer
         @include displayFlexProperties(row, space-between)
-        margin-top: 10px
+        margin-top: 1.2em
 
         .card
             @include displayFlexProperties($alignItems: center)
             margin-top: 10px
+
+            .card__title
+                font-size: 1.1em
+                letter-spacing: 1px
+                text-transform: uppercase
+
+            .card__subtitle
+                font-size: 0.7em
+                text-transform: uppercase
+                font-weight: 400
 
             .card__img
                 max-width: 80%
@@ -172,4 +222,3 @@ ul
         .card--right
             margin-left: 20px
 
-        
