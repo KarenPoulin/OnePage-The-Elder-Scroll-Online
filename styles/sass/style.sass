@@ -62,14 +62,19 @@ p
     color: white
 
 .btn
-    background-color: $-green
+    background-color: $-dark-gold
+    font-weight: 500
+    letter-spacing: 0.5px
     color: white
-    padding: 10px
-    margin: 10px
-    border: $-primary-border
+    padding: 0.5em 1.4em
+    border: none
     text-align: center
     text-decoration: none
     font-family: $-primary-font
+
+    &:hover
+        background-color: white
+        color: $-dark-brown
 
 
 ul
@@ -104,21 +109,24 @@ ul
 .newsletterSection
     text-align: center
     max-width: 1600px
-    margin: 8rem auto 1rem
+    margin: 8rem auto 1.5rem
 
 .newsletter__text
     max-width: 50%
     font-size: 0.6em
+    margin-bottom: 1em
 
 #formNewsletter
     @include displayFlexProperties(row, center, center)
+
+    #emailNewsletter
+        margin-right: 1em
 
 .banner__background
     @include displayFlexProperties(row, center, center)
     background-image: url("/images-telecharger/crowns-banner.jpg")
     background-repeat: no-repeat
     background-size: cover
-    border: $-primary-border
     width: 100%
     padding-top: 1em
 
@@ -126,8 +134,13 @@ ul
         max-width: 120px
         padding-right: 1.8em
 
-    a
-        padding: 0.5em 1.8em
+    .btn--brown
+        background-color: $-dark-brown
+
+        &:hover
+            background-color: white
+            color: $-dark-brown
+
 
 
 
@@ -225,6 +238,7 @@ ul
                 font-size: 1.1em
                 letter-spacing: 1px
                 text-transform: uppercase
+                text-align: left
 
             .card__subtitle
                 font-size: 0.7em
