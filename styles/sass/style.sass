@@ -8,6 +8,10 @@
     align-items: $alignItems
     align-content: $alignContent
 
+body 
+    @include displayFlexProperties(column, flex-start, center)
+
+
 .background--opacity
     background-color: #0000009a
     min-height: 100%
@@ -32,12 +36,14 @@
     pointer-events: none
 
 .primaryContainer 
-    margin: 4rem 8rem
+    margin: 4rem auto
     max-width: 1600px
+    padding: 0 9rem
 
 .secondaryContainer
-    margin: 4rem
-    max-width: 1600px
+    margin: 4rem auto
+    max-width: 1800px
+    padding: 0 4rem
 
 h1, h2, h3, h4, h5, h6
     margin: 20px auto 6px
@@ -55,8 +61,16 @@ p
     margin: 8px auto 4px
     color: white
 
-header
-    background-color: $-dark-brown
+.btn
+    background-color: $-green
+    color: white
+    padding: 10px
+    margin: 10px
+    border: $-primary-border
+    text-align: center
+    text-decoration: none
+    font-family: $-primary-font
+
 
 ul
     @include displayFlexProperties(row)
@@ -69,19 +83,28 @@ ul
         letter-spacing: 1px
         color: $-gold
 
-.navigation
-    @include displayFlexProperties(row, space-between, center)
-    margin: 0 8rem 4rem 8rem
-    padding: 0.75rem 0
-    max-width: 1600px
+.navigation__background
+    background-color: $-dark-brown
+    width: 100%
+    position: fixed
+    margin-bottom: 2rem
 
-    img
-        max-width: 150px
+    .navigation
+        @include displayFlexProperties(row, space-between, center)
+        margin: 0 auto
+        padding: 0.75rem 8rem
+        max-width: 1600px
+
+        img
+            max-width: 150px
+
+
+
 
 .newsletterSection
     text-align: center
     max-width: 1600px
-    margin-bottom: 1rem
+    margin: 8rem auto 1rem
 
 .newsletter__text
     max-width: 50%
@@ -91,29 +114,20 @@ ul
     @include displayFlexProperties(row, center, center)
 
 .banner__background
-    background-color: $-dark-brown
-
-.banner
     @include displayFlexProperties(row, center, center)
-    padding: 20px 20px 0 20px
+    background-image: url("/images-telecharger/crowns-banner.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    border: $-primary-border
+    width: 100%
+    padding-top: 1em
 
     img
         max-width: 120px
-        padding: 0 30px
+        padding-right: 1.8em
 
-    a   
-        padding: 10px 30px
-
-.btn
-    background-color: $-green
-    color: white
-    padding: 10px
-    margin: 10px
-    border: $-primary-border
-    text-align: center
-    text-decoration: none
-    font-family: $-primary-font
-    
+    a
+        padding: 0.5em 1.8em
 
 
 
@@ -151,6 +165,14 @@ ul
         max-width: 40%
         margin-right: 20px
 
+    .statsTextContainer
+       max-width: 60%
+       padding-right: 1rem
+
+    .stats__title
+        font-size: 1.5em
+        letter-spacing: 1px
+            
     .statsNumberContainer
         @include displayFlexProperties(row)
         margin: 20px 0
@@ -167,9 +189,6 @@ ul
     .stats__text
         margin: 0 auto 4px
 
-.stats__title
-    font-size: 1.5em
-    letter-spacing: 1px
 
     
 
@@ -178,6 +197,7 @@ ul
     @include displayFlexProperties($justify: center)
     margin-top: 20px
     margin-bottom: 20px
+
 
     .cards__title
         font-size: 1.3em
@@ -191,6 +211,11 @@ ul
     .cardsContainer
         @include displayFlexProperties(row, space-between)
         margin-top: 1.2em
+        background-image: url("/images-telecharger/cards-background.jpg")
+        background-repeat: no-repeat
+        background-size: cover
+        padding: 2.3em
+        border: $-primary-border
 
         .card
             @include displayFlexProperties($alignItems: center)
@@ -210,6 +235,7 @@ ul
                 max-width: 80%
                 height: 100%
                 object-fit: cover
+                border: $-primary-border
 
             .card__icon
                 color: $-green
