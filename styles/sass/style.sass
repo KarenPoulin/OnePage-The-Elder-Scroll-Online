@@ -103,6 +103,14 @@ ul
         img
             max-width: 150px
 
+        .navigation__itemWithIcon
+            @include displayFlexProperties(row)
+
+            img
+                width: 10px
+                object-fit: cover
+                padding-left: 6px
+            
 
 
 
@@ -148,24 +156,32 @@ ul
     @include displayFlexProperties()
     text-align: center
 
+    .presentation__title 
+        letter-spacing: 1px
+        font-size: 2em
+        text-transform: uppercase
+
+    .presentation__textContainer
+        max-width: 50%
+
 
 .presentationSection__3col
     @include displayFlexProperties($direction: row, $alignItems:baseline)
+    padding-top: 1em
 
     .column
-        @include displayFlexProperties()
+        @include displayFlexProperties(column, flex-start, center)
         padding: 10px 30px
 
-.presentation__title 
-    letter-spacing: 1px
-    font-size: 2em
-    text-transform: uppercase
-    
-.presentation__subtitle
-    font-size: 1.2em
+    .presentation__img
+        width: 50px
+        object-fit: cover
+        
 
-.presentation__textContainer
-    max-width: 50%
+    .presentation__subtitle
+        font-size: 1.2em
+
+
         
 
 
@@ -252,8 +268,9 @@ ul
                 border: $-primary-border
 
             .card__icon
-                color: $-green
+                color: $-gold
                 font-size: 1.3em
+                padding-top: 0.3em
                 padding-right: 6px
         
         .card--left

@@ -152,6 +152,19 @@ ul a {
 .navigation__background .navigation img {
   max-width: 150px;
 }
+.navigation__background .navigation .navigation__itemWithIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+}
+.navigation__background .navigation .navigation__itemWithIcon img {
+  width: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-left: 6px;
+}
 
 .newsletterSection {
   text-align: center;
@@ -208,6 +221,14 @@ ul a {
   align-content: normal;
   text-align: center;
 }
+.presentationSection .presentation__title {
+  letter-spacing: 1px;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.presentationSection .presentation__textContainer {
+  max-width: 50%;
+}
 
 .presentationSection__3col {
   display: flex;
@@ -215,28 +236,23 @@ ul a {
   justify-content: flex-start;
   align-items: baseline;
   align-content: normal;
+  padding-top: 1em;
 }
 .presentationSection__3col .column {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
   align-content: normal;
   padding: 10px 30px;
 }
-
-.presentation__title {
-  letter-spacing: 1px;
-  font-size: 2em;
-  text-transform: uppercase;
+.presentationSection__3col .presentation__img {
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.presentation__subtitle {
+.presentationSection__3col .presentation__subtitle {
   font-size: 1.2em;
-}
-
-.presentation__textContainer {
-  max-width: 50%;
 }
 
 .statsContainer {
@@ -337,8 +353,9 @@ ul a {
   border: #dfb862 2px solid;
 }
 .cardsSectionContainer .cardsContainer .card .card__icon {
-  color: #39803c;
+  color: #dfb862;
   font-size: 1.3em;
+  padding-top: 0.3em;
   padding-right: 6px;
 }
 .cardsSectionContainer .cardsContainer .card--left {
