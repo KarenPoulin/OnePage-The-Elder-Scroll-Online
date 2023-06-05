@@ -1,0 +1,220 @@
+@mixin positionHeightWidth($position: static, $height: auto, $width: auto)
+    position: $position
+    height: $height
+    width: $width
+
+    
+.sliderContainer 
+    @include positionHeightWidth(relative, $height: 500px)
+    overflow: hidden
+    margin: 0 auto 4rem
+    font-family: $-secondary-font
+    border-top: $-primary-border
+    border-bottom: $-primary-border
+    
+
+    .slider__img
+        @include positionHeightWidth($height: 100%)
+        white-space: nowrap
+        transition: 0.8s
+
+        > *
+            @include positionHeightWidth($height: 100%, $width: 100%)
+            display: inline-block
+            white-space: normal
+            vertical-align: top
+            background: none 50% no-repeat
+            background-size: cover
+            object-fit: cover
+
+    .slider__prevNextBtn
+        @include positionHeightWidth(absolute, 0, 100%)
+        z-index: 1
+        top: 50%
+        font-size: 2em
+
+        > div+div
+            visibility: hidden
+        
+        a
+            @include positionHeightWidth(absolute, 60px, 60px)
+            background: $-dark-gold-opacity
+            line-height: 60px
+            text-align: center
+            text-decoration: none
+            color: #fff
+            -webkit-transition: 0.3s
+            transition: 0.3s
+            -webkit-transform: translateY(-50%)
+            transform: translateY(-50%)
+            left: 0
+        
+            &:hover
+                background: $-dark-gold
+        
+        a+a
+            left: auto
+            right: 0
+    
+    .slider__bulletsBtn
+        @include positionHeightWidth($position: absolute, $width: 100%)
+        z-index: 2
+        bottom: 0
+        padding: 10px 0
+        text-align: center
+    
+        > a
+            @include positionHeightWidth($height: 20px, $width: 20px) 
+            display: inline-block
+            border-radius: 50%
+            line-height: 20px
+            margin: 0 10px
+            color: #fff
+            text-decoration: none
+            text-align: center
+            background: $-dark-gold
+            -webkit-transition: 0.3s
+            transition: 0.3s
+        
+            &:hover
+                background: $-dark-gold !important
+
+        > a+a
+            background: dark-gold-opacity
+    
+    >s
+        &:target ~ .slider__bulletsBtn
+            >*
+                background: dark-gold-opacity
+
+        &:target ~ .slider__prevNextBtn
+            >*
+                visibility: hidden
+            
+
+#s1
+    &:target ~ .slider__bulletsBtn
+        >*
+            &:nth-child(1)
+                background: #fff
+
+    &:target ~ .slider__prevNextBtn
+        >*
+            &:nth-child(1)
+                visibility: visible
+
+    &:target ~ .slider__img
+        transform: translateX(0%)
+        -webkit-transform: translateX(0%)
+
+
+#s2
+    &:target ~ .slider__bulletsBtn
+        >*
+            &:nth-child(2)
+                background: #fff
+
+    &:target ~ .slider__prevNextBtn
+        >*
+            &:nth-child(2)
+                visibility: visible
+
+    &:target ~ .slider__img
+        transform: translateX(-100%)
+        -webkit-transform: translateX(-100%)
+
+
+#s3
+    &:target ~ .slider__bulletsBtn
+        >*
+            &:nth-child(3)
+                background: #fff
+
+    &:target ~ .slider__prevNextBtn
+        >*
+            &:nth-child(3)
+                visibility: visible
+
+    &:target ~ .slider__img
+        transform: translateX(-200%)
+        -webkit-transform: translateX(-200%)
+
+
+#s4
+    &:target ~ .slider__bulletsBtn
+        >*
+            &:nth-child(4)
+                background: #fff
+
+    &:target ~ .slider__prevNextBtn
+        >*
+            &:nth-child(4)
+                visibility: visible
+
+    &:target ~ .slider__img
+        transform: translateX(-300%)
+        -webkit-transform: translateX(-300%)
+                
+
+
+        
+// #s1
+//     &:target ~ .slider__bulletsBtn
+//         >*
+//             &:nth-child(1)
+//                 background: rgba(227, 172, 54, 1)
+// #s2
+//     &:target ~ .slider__bulletsBtn
+//         >*
+//             &:nth-child(2)
+//                 background: rgba(227, 172, 54, 1)
+// #s3
+//     &:target ~ .slider__bulletsBtn
+//         >*
+//             &:nth-child(3)
+//                 background: rgba(227, 172, 54, 1)
+// #s4
+//     &:target ~ .slider__bulletsBtn
+//         >*
+//             &:nth-child(4)
+//                 background: rgba(227, 172, 54, 1)
+                
+                
+// #s1
+//     &:target ~ .slider__prevNextBtn
+//         >*
+//             &:nth-child(1)
+//                 visibility: visible
+// #s2
+//     &:target ~ .slider__prevNextBtn
+//         >*
+//             &:nth-child(2)
+//                 visibility: visible
+// #s3
+//     &:target ~ .slider__prevNextBtn
+//         >*
+//             &:nth-child(3)
+//                 visibility: visible
+// #s4
+//     &:target ~ .slider__prevNextBtn
+//         >*
+//             &:nth-child(4)
+//                 visibility: visible
+                
+// #s1
+//     &:target ~ .slider__img
+//         transform: translateX(0%)
+//         -webkit-transform: translateX(0%)
+// #s2
+//     &:target ~ .slider__img
+//         transform: translateX(-100%)
+//         -webkit-transform: translateX(-100%)
+// #s3
+//     &:target ~ .slider__img
+//         transform: translateX(-200%)
+//         -webkit-transform: translateX(-200%)
+// #s4
+//     &:target ~ .slider__img
+//         transform: translateX(-300%)
+//         -webkit-transform: translateX(-300%)
+        

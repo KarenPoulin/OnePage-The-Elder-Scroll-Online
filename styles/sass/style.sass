@@ -1,4 +1,5 @@
 @import 'variables'
+@import 'slider'
 @import 'grid'
 
 @mixin displayFlexProperties($direction: column, $justify: flex-start, $alignItems: stretch, $alignContent: normal)
@@ -46,7 +47,7 @@ body
     padding: 0 4rem
 
 h1, h2, h3, h4, h5, h6
-    margin: 20px auto 6px
+    margin: 20px 0 6px
     padding: 0
     font-family: $-primary-font
     font-weight: 700
@@ -58,23 +59,26 @@ p
     font-size: 14px
     font-weight: 300
     line-height: 1.5em
-    margin: 8px auto 4px
+    margin: 8px 0 4px
     color: white
 
 .btn
     background-color: $-dark-gold
+    font-size: 0.8em
     font-weight: 500
     letter-spacing: 0.5px
     color: white
-    padding: 0.5em 1.4em
+    padding: 0.8em 1.5em
     border: none
     text-align: center
     text-decoration: none
-    font-family: $-primary-font
+    font-family: $-secondary-font
 
     &:hover
         background-color: white
         color: $-dark-brown
+        text-decoration: underline
+
 
 
 ul
@@ -91,8 +95,9 @@ ul
 .navigation__background
     background-color: $-dark-brown
     width: 100%
-    position: fixed
-    margin-bottom: 2rem
+    /* position: fixed */
+    /* margin-bottom: 2rem */
+    z-index: 3
 
     .navigation
         @include displayFlexProperties(row, space-between, center)
@@ -114,10 +119,18 @@ ul
 
 
 
+            
+
+        
+
+
+
+
 .newsletterSection
+    @include displayFlexProperties(column, flex-start, center) 
     text-align: center
     max-width: 1600px
-    margin: 8rem auto 1.5rem
+    margin: 4rem auto 1.5rem
 
 .newsletter__text
     max-width: 50%
@@ -148,12 +161,14 @@ ul
         &:hover
             background-color: white
             color: $-dark-brown
+            text-decoration: underline
+
 
 
 
 
 .presentationSection
-    @include displayFlexProperties()
+    @include displayFlexProperties($alignItems: center)
     text-align: center
 
     .presentation__title 
@@ -193,6 +208,7 @@ ul
     img
         max-width: 40%
         margin-right: 20px
+        object-fit: cover
 
     .statsTextContainer
        max-width: 60%
@@ -204,7 +220,7 @@ ul
             
     .statsNumberContainer
         @include displayFlexProperties(row)
-        margin: 20px 0
+        margin: 0.6em 0
 
         .statsNumberContainer--right
             padding-left: 40px
@@ -212,18 +228,19 @@ ul
     .stats__numbers
         font-weight: 700
         font-size: 2.5em
-        color: $-blue
-        margin-bottom: -0.2em
+        color: $-dark-gold
+        margin-bottom: 0.1em
+        border-bottom: 3px solid $-dark-gold
 
     .stats__text
-        margin: 0 auto 4px
+        margin: 0 auto 1.6em
 
 
     
 
 
 .cardsSectionContainer
-    @include displayFlexProperties($justify: center)
+    @include displayFlexProperties($justify: center, $alignItems: center)
     margin-top: 20px
     margin-bottom: 20px
 
@@ -232,6 +249,7 @@ ul
         font-size: 1.3em
         letter-spacing: 1px
         text-transform: uppercase
+        text-align: center
 
     .cards__text
         text-align: center
@@ -247,7 +265,7 @@ ul
         border: $-primary-border
 
         .card
-            @include displayFlexProperties($alignItems: center)
+            @include displayFlexProperties()
             margin-top: 10px
 
             .card__title
@@ -255,6 +273,7 @@ ul
                 letter-spacing: 1px
                 text-transform: uppercase
                 text-align: left
+
 
             .card__subtitle
                 font-size: 0.7em
