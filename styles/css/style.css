@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 .sliderContainer {
   position: relative;
   height: 500px;
@@ -80,7 +84,7 @@
   color: #fff;
   text-decoration: none;
   text-align: center;
-  background: #e3ac36;
+  background: rgba(227, 172, 54, 0.6);
   transition: 0.3s;
 }
 .sliderContainer .slider__bulletsBtn > a:hover {
@@ -240,7 +244,7 @@ p {
   color: white;
 }
 
-.btn {
+.btn, .btn--contactForm {
   background-color: #e3ac36;
   font-size: 0.8em;
   font-weight: 500;
@@ -252,10 +256,16 @@ p {
   text-decoration: none;
   font-family: "Lato", sans-serif;
 }
-.btn:hover {
+.btn:hover, .btn--contactForm:hover {
   background-color: white;
   color: #151212;
   text-decoration: underline;
+}
+
+.focusInputs, .inputsContainer .inputsContainer__input:focus, .inputsContainer .inputsContainer__input--right:focus, .inputsContainer .inputsContainer__input--left:focus, .formNewsletter .formNewsletter__inputEmail:focus {
+  box-shadow: inset 0px 0px 15px 3px rgba(223, 184, 98, 0.5);
+  outline: none;
+  color: #151212;
 }
 
 ul {
@@ -326,17 +336,21 @@ ul a {
   margin-bottom: 1em;
 }
 
-#formNewsletter {
+.formNewsletter {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: normal;
 }
-#formNewsletter #emailNewsletter {
+.formNewsletter .formNewsletter__inputEmail {
   margin-right: 1em;
+  padding: 0.4em;
+  font-size: 0.8em;
+  font-family: "Lato", sans-serif;
+  border: #dfb862 2px solid;
+  color: #e3ac36;
 }
-
 .banner__background {
   display: flex;
   flex-direction: row;
@@ -374,6 +388,7 @@ ul a {
   letter-spacing: 1px;
   font-size: 2em;
   text-transform: uppercase;
+  margin-bottom: 6px;
 }
 .presentationSection .presentation__textContainer {
   max-width: 50%;
@@ -516,4 +531,95 @@ ul a {
 }
 .cardsSectionContainer .cardsContainer .card--right {
   margin-left: 20px;
+}
+
+.mapFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  align-content: normal;
+  margin: 4rem auto;
+  position: relative;
+}
+
+.map {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border: #dfb862 2px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: normal;
+  padding: 0;
+  margin: 4rem 4rem;
+}
+.formContainer .formContact {
+  background-color: #151212;
+  padding: 2em;
+  border: #dfb862 2px solid;
+  max-width: 40%;
+}
+
+.formContact__title {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.formContact__text {
+  margin-bottom: 1em;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
+}
+.inputsContainer .inputsContainer__input, .inputsContainer .inputsContainer__input--right, .inputsContainer .inputsContainer__input--left {
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding: 0.4em;
+  font-size: 0.8em;
+  font-family: "Lato", sans-serif;
+  border: #dfb862 2px solid;
+  color: #e3ac36;
+}
+.inputsContainer .inputsContainer__input--left {
+  margin-right: 0.25em;
+}
+.inputsContainer .inputsContainer__input--right {
+  margin-left: 0.25em;
+}
+.inputsContainer .formNamesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: normal;
+}
+.inputsContainer .formNamesContainer .formNamesContainer--left {
+  width: 100%;
+  margin-right: 0.25em;
+}
+.inputsContainer .formNamesContainer .formNamesContainer--right {
+  width: 100%;
+  margin-left: 0.25em;
+}
+
+.btn--contactForm {
+  margin-top: 1em;
+}
+
+.hidden {
+  display: none;
 }

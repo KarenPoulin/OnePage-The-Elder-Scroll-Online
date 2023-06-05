@@ -81,13 +81,13 @@
                 <p class="newsletter__text">Stay connected to the world of Tamriel! Subscribe to our newsletter for the latest updates, exclusive
                     content, and special offers from The Elder Scrolls Online. Join our community and embark on epic
                     adventures!</p>
-                <form id="formNewsletter" action="">
+                <form id="formNewsletter" class="formNewsletter" action="">
                     <div>
-                        <label for="emailNewsletter"></label>
-                        <input type="text" id="emailNewsletter" name="emailNewsletter" placeholder="Email">
+                        <label for="emailNewsletter" class="hidden">Courriel</label>
+                        <input class="formNewsletter__inputEmail" type="email" id="emailNewsletter" name="emailNewsletter" placeholder="Courriel">
                     </div>
                     <div>
-                        <label for="subscribeNewsletter"></label>
+                        <label for="subscribeNewsletter" class="hidden">Soumettre inscription à l'infolettre</label>
                         <button class="btn" type="submit" id="subscribeNewsletter" name="subscribeNewsletter">Subscribe</button>
                     </div>
                 </form>
@@ -104,25 +104,25 @@
 
         <!-- PRESENTATION -->
         <section class="primaryContainer presentationSection">
-            <h2 class="presentation__title">This is The Elder Scrolls Online</h2>
+            <h1 class="presentation__title">This is The Elder Scrolls Online</h1>
             <p class="presentation__textContainer">Join over 21 million players and discover an adventure unlike anything else in The Elder Scrolls Online,
                 the award-winning online RPG set in the Elder Scrolls universe.</p>
             <div class="presentationSection__3col">
                 <div class="column">
                     <img class="presentation__img"  src="images-telecharger/in-game-icons-cave.png" alt="">
-                    <h4 class="presentation__subtitle">Play your way</h4>
+                    <h3 class="presentation__subtitle">Play your way</h3>
                     <p>Build your character! Equip any weapons and armor you find and tailor your playstyle with
                         hundreds of unique abilities.</p>
                 </div>
                 <div class="column">
                     <img class="presentation__img"  src="images-telecharger/in-game-icons-dragon.png" alt="">
-                    <h4 class="presentation__subtitle">An elder scrolls adventure</h4>
+                    <h3 class="presentation__subtitle">An elder scrolls adventure</h3>
                     <p>Discover Tamriel's Second Era and enjoy all the epic quests, memorable characters, and dangerous
                         enemies you expect in an Elder Scrolls game.</p>
                 </div>
                 <div class="column">
                     <img class="presentation__img" src="images-telecharger/in-game-icons-wayshrine.png" alt="">
-                    <h4 class="presentation__subtitle">Go anywhere</h4>
+                    <h3 class="presentation__subtitle">Go anywhere</h3>
                     <p>Explore freely as your character is scaled to face each zone, meaning you can go anywhere, with
                         anyone, at any level.</p>
                 </div>
@@ -157,7 +157,7 @@
             <div class="primaryContainer statsContainer">
                 <img src="images-telecharger/stats.png" alt="">
                 <div class="statsTextContainer">
-                    <h3 class="stats__title">Join millions of players</h3>
+                    <h2 class="stats__title">Join millions of players</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquid, magni fuga beatae
                         ullam
                         totam reiciendis animi rerum. Voluptatibus magnam delectus nihil vel quae vitae molestiae
@@ -184,14 +184,14 @@
         <!-- CARDS -->
         <section>
             <div class="secondaryContainer cardsSectionContainer">
-                <h4 class="cards__title">Game Updates</h4>
+                <h3 class="cards__title">Game Updates</h3>
                 <p class="cards__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque voluptatum, dolor inventore quis
                     consequuntur qui porro at, soluta mollitia aut, incidunt distinctio ex provident in! Deserunt
                     necessitatibus libero asperiores ipsa.</p>
                 <div class="cardsContainer">
                     <div class="card card--left">
                         <img class="card__img" src="images-telecharger/ON-cover-Morrowind_Box_Art.png" alt="">
-                        <h5 class="card__title">Morrowind</h5>
+                        <h4 class="card__title">Morrowind</h4>
                         <p class="card__subtitle">Chapter</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quos veritatis neque.
                             Totam,
@@ -209,7 +209,7 @@
                         <img class="card__img"
                             src="images-telecharger/The-Elder-Scrolls-Online-Blackwood-Collectors-Edition-Upgrade-DLC.jpeg"
                             alt="">
-                        <h5 class="card__title">Blackwood</h5>
+                        <h4 class="card__title">Blackwood</h4>
                         <p class="card__subtitle">Chapter</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quos veritatis neque.
                             Totam,
@@ -225,7 +225,7 @@
                     </div>
                     <div class="card">
                         <img class="card__img" src="images-telecharger/ON-cover-High_Isle.jpeg" alt="">
-                        <h5 class="card__title">High Isle</h5>
+                        <h4 class="card__title">High Isle</h4>
                         <p class="card__subtitle">Chapter</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quos veritatis neque.
                             Totam,
@@ -243,7 +243,7 @@
                         <img class="card__img"
                             src="images-telecharger/9BFLeFqdNDhsch9IxWKhwIVGr1t_zYGxL1mwyhWORVg_350x200_1x-0.jpeg"
                             alt="">
-                        <h5 class="card__title">Elsweyr</h5>
+                        <h4 class="card__title">Elsweyr</h4>
                         <p class="card__subtitle">Chapter</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quos veritatis neque.
                             Totam,
@@ -266,35 +266,42 @@
 
 
         <!-- MAP -->
-        <section>
-            <form class="primaryContainer" action="">
-                <div>
-                    <h4></h4>
-                    <p></p>
+        <section class="mapFormContainer">
+            <div class="secondaryContainer formContainer">
+                <form class="formContact" action="">
                     <div>
-                        <div>
-                            <div>
-                                <label for=""></label>
-                                <input type="text">
+                        <h4 class="formContact__title">Send us a message</h4>
+                        <p class="formContact__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel soluta adipisci animi alias.</p>
+                        <div class="inputsContainer">
+                            <div class="formNamesContainer">
+                                <div class="formNamesContainer--left">
+                                    <label for="txtLastName" class="hidden">Nom de famille</label>
+                                    <input class="inputsContainer__input--left" id="txtLastName" name="txtLastName" type="text" placeholder="Nom de famille">
+                                </div>
+                                <div class="formNamesContainer--right">
+                                    <label for="txtFirstName" class="hidden">Prénom</label>
+                                    <input class="inputsContainer__input--right" id="txtFirstName" name="txtFirstName" type="text" placeholder="Prénom">
+                                </div>
                             </div>
                             <div>
-                                <label for=""></label>
-                                <input type="text">
+                                <label for="email" class="hidden">Courriel</label>
+                                <input class="inputsContainer__input" id="email" type="email" name="email" placeholder="Courriel">
+                            </div>
+                            <div>
+                                <label for="txtMessage" class="hidden">Message</label>
+                                <textarea class="inputsContainer__input" name="txtMessage" id="txtMessage" cols="30" rows="10" placeholder="Message"></textarea>
                             </div>
                         </div>
                         <div>
-                            <label for=""></label>
-                            <input type="text">
+                            <label for="submitBtn" class="hidden">Soumettre</label>
+                            <button class="btn--contactForm" id="submitBtn">Submit</button>
                         </div>
-                        <div>
-                            <label for=""></label>
-                            <input type="text">
-                        </div>
-                        <button>Submit</button>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198310.23080983723!2d-77.58549943788563!3d39.04729892998891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cd5858a17331%3A0xfe07c9af2680e583!2sBethesda%20Softworks%20LLC!5e0!3m2!1sfr!2sca!4v1685994754753!5m2!1sfr!2sca"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
+
     </main>
 
     <footer>
