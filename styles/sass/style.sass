@@ -83,10 +83,13 @@ p
         color: $-dark-brown
         text-decoration: underline
 
-.focusInputs
+.hoverInputs
     box-shadow: inset 0px 0px 15px 3px rgba(223,184,98,0.5)
+
+.focusInputs
+    background-color: $-gold
+    color: white
     outline: none
-    color: $-dark-brown
 
 ul
     @include displayFlexProperties(row)
@@ -118,10 +121,11 @@ ul
         .navigation__itemWithIcon
             @include displayFlexProperties(row)
 
+
             img
                 width: 10px
                 object-fit: cover
-                padding-left: 6px
+                margin-left: 6px
             
 
 
@@ -154,6 +158,9 @@ ul
         font-family: $-secondary-font
         border: $-primary-border
         color: $-dark-gold
+
+        &:hover
+            @extend .hoverInputs
 
         &:focus
             @extend .focusInputs
@@ -363,6 +370,9 @@ ul
         font-family: $-secondary-font
         border: $-primary-border
         color: $-dark-gold
+
+        &:hover
+            @extend .hoverInputs
 
         &:focus
             @extend .focusInputs

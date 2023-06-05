@@ -262,10 +262,14 @@ p {
   text-decoration: underline;
 }
 
-.focusInputs, .inputsContainer .inputsContainer__input:focus, .inputsContainer .inputsContainer__input--right:focus, .inputsContainer .inputsContainer__input--left:focus, .formNewsletter .formNewsletter__inputEmail:focus {
+.hoverInputs, .inputsContainer .inputsContainer__input:hover, .inputsContainer .inputsContainer__input--right:hover, .inputsContainer .inputsContainer__input--left:hover, .formNewsletter .formNewsletter__inputEmail:hover {
   box-shadow: inset 0px 0px 15px 3px rgba(223, 184, 98, 0.5);
+}
+
+.focusInputs, .inputsContainer .inputsContainer__input:focus, .inputsContainer .inputsContainer__input--right:focus, .inputsContainer .inputsContainer__input--left:focus, .formNewsletter .formNewsletter__inputEmail:focus {
+  background-color: #dfb862;
+  color: white;
   outline: none;
-  color: #151212;
 }
 
 ul {
@@ -316,7 +320,7 @@ ul a {
   width: 10px;
   -o-object-fit: cover;
      object-fit: cover;
-  padding-left: 6px;
+  margin-left: 6px;
 }
 
 .newsletterSection {
