@@ -84,7 +84,7 @@
                 <form id="formNewsletter" class="formNewsletter" action="">
                     <div>
                         <label for="emailNewsletter" class="hidden">Courriel</label>
-                        <input class="formNewsletter__inputEmail" type="email" id="emailNewsletter" name="emailNewsletter" placeholder="Courriel">
+                        <input class="formNewsletter__email" type="email" id="emailNewsletter" name="emailNewsletter" placeholder="Courriel">
                     </div>
                     <div>
                         <label for="subscribeNewsletter" class="hidden">Soumettre inscription à l'infolettre</label>
@@ -93,6 +93,11 @@
                 </form>
             </div>
         </section>
+
+
+
+
+
 
         <!-- BANDE (BUY CROWNS) -->
         <section class="banner">
@@ -206,7 +211,7 @@
                                     class="fa fa-twitch card__icon"></i></a>
                         </div>
                     </div>
-                    <div class="card card--left">
+                    <div class="card--left">
                         <img class="card__img"
                             src="images-telecharger/The-Elder-Scrolls-Online-Blackwood-Collectors-Edition-Upgrade-DLC.jpeg"
                             alt="">
@@ -240,7 +245,7 @@
                                     class="fa fa-twitch card__icon"></i></a>
                         </div>
                     </div>
-                    <div class="card card--right">
+                    <div class="card--right">
                         <img class="card__img"
                             src="images-telecharger/9BFLeFqdNDhsch9IxWKhwIVGr1t_zYGxL1mwyhWORVg_350x200_1x-0.jpeg"
                             alt="">
@@ -269,19 +274,19 @@
         <!-- MAP -->
         <section class="mapFormContainer">
             <div class="formContainer">
-                <form class="formContact" action="">
-                    <div>
+                <form id="formContact" class="formContact" action="">
+                    
                         <h4 class="formContact__title">Send us a message</h4>
                         <p class="formContact__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel soluta adipisci animi alias.</p>
                         <div class="inputsContainer">
                             <div class="formNamesContainer">
                                 <div class="formNamesContainer--left">
                                     <label for="txtLastName" class="hidden">Nom de famille</label>
-                                    <input class="inputsContainer__input--left" id="txtLastName" name="txtLastName" type="text" placeholder="Nom de famille">
+                                    <input class="inputsContainer__input--left" id="txtLastName" name="lastName" type="text" placeholder="Nom de famille">
                                 </div>
                                 <div class="formNamesContainer--right">
                                     <label for="txtFirstName" class="hidden">Prénom</label>
-                                    <input class="inputsContainer__input--right" id="txtFirstName" name="txtFirstName" type="text" placeholder="Prénom">
+                                    <input class="inputsContainer__input--right" id="txtFirstName" name="firstName" type="text" placeholder="Prénom">
                                 </div>
                             </div>
                             <div>
@@ -290,14 +295,14 @@
                             </div>
                             <div>
                                 <label for="txtMessage" class="hidden">Message</label>
-                                <textarea class="inputsContainer__input" name="txtMessage" id="txtMessage" cols="30" rows="10" placeholder="Message"></textarea>
+                                <textarea class="inputsContainer__input" name="message" id="txtMessage" cols="30" rows="10" placeholder="Message"></textarea>
                             </div>
                         </div>
                         <div>
                             <label for="submitBtn" class="hidden">Soumettre</label>
                             <button class="btn--contactForm" id="submitBtn">Submit</button>
                         </div>
-                    </div>
+                    
                 </form>
             </div>
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198310.23080983723!2d-77.58549943788563!3d39.04729892998891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cd5858a17331%3A0xfe07c9af2680e583!2sBethesda%20Softworks%20LLC!5e0!3m2!1sfr!2sca!4v1685994754753!5m2!1sfr!2sca"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

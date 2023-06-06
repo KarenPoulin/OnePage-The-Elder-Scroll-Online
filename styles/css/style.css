@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-.hoverInputs, .formNewsletter .formNewsletter__inputEmail:hover, .inputsContainer .inputsContainer__input:hover, .inputsContainer .inputsContainer__input--right:hover, .inputsContainer .inputsContainer__input--left:hover {
+.hoverInputs, .formNewsletter .formNewsletter__email:hover, .inputsContainer .inputsContainer__input:hover, .inputsContainer .inputsContainer__input--right:hover, .inputsContainer .inputsContainer__input--left:hover {
   box-shadow: inset 0px 0px 15px 3px rgba(223, 184, 98, 0.5);
 }
 
-.focusInputs, .formNewsletter .formNewsletter__inputEmail:focus, .inputsContainer .inputsContainer__input:focus, .inputsContainer .inputsContainer__input--right:focus, .inputsContainer .inputsContainer__input--left:focus {
+.focusInputs, .formNewsletter .formNewsletter__email:focus, .inputsContainer .inputsContainer__input:focus, .inputsContainer .inputsContainer__input--right:focus, .inputsContainer .inputsContainer__input--left:focus {
   background-color: #dfb862;
   color: white;
   outline: none;
@@ -387,7 +387,7 @@ ul a {
   border: #dfb862 2px solid;
 }
 
-.card {
+.card, .card--right, .card--left {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -395,25 +395,25 @@ ul a {
   align-content: normal;
   margin-top: 10px;
 }
-.card .card__title {
+.card .card__title, .card--right .card__title, .card--left .card__title {
   font-size: 1.1em;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: left;
 }
-.card .card__subtitle {
+.card .card__subtitle, .card--right .card__subtitle, .card--left .card__subtitle {
   font-size: 0.7em;
   text-transform: uppercase;
   font-weight: 400;
 }
-.card .card__img {
+.card .card__img, .card--right .card__img, .card--left .card__img {
   max-width: 80%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border: #dfb862 2px solid;
 }
-.card .card__icon {
+.card .card__icon, .card--right .card__icon, .card--left .card__icon {
   color: #dfb862;
   font-size: 1.3em;
   padding-top: 0.3em;
@@ -567,7 +567,7 @@ ul a {
   align-items: center;
   align-content: normal;
 }
-.formNewsletter .formNewsletter__inputEmail {
+.formNewsletter .formNewsletter__email {
   margin-right: 1em;
   padding: 0.4em;
   font-size: 0.8em;
