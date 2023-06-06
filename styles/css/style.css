@@ -380,7 +380,7 @@ ul a {
   align-items: stretch;
   align-content: normal;
   margin-top: 1.2em;
-  background-image: url("/images-telecharger/cards-background.jpg");
+  background-image: url("../../images-telecharger/cards-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2.3em;
@@ -518,6 +518,18 @@ ul a {
   margin-top: 1em;
 }
 
+.inputControl .success {
+  border-color: rgb(55, 145, 99);
+}
+.inputControl .error {
+  border-color: rgb(181, 60, 70);
+}
+.inputControl > .errorMessage {
+  color: rgb(226, 43, 107);
+  font-size: 9px;
+  height: 13px;
+}
+
 .bodyBackground--opacity {
   background-color: rgba(0, 0, 0, 0.6039215686);
   min-height: 100%;
@@ -581,7 +593,7 @@ ul a {
   justify-content: center;
   align-items: center;
   align-content: normal;
-  background-image: url("/images-telecharger/crowns-banner.jpg");
+  background-image: url("../../images-telecharger/crowns-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
