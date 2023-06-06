@@ -1,22 +1,19 @@
-*
-    box-sizing: border-box
-    
 @import 'variables'
-@import 'slider'
-@import 'grid'
-
-@mixin displayFlexProperties($direction: column, $justify: flex-start, $alignItems: stretch, $alignContent: normal)
-    display: flex
-    flex-direction: $direction
-    justify-content: $justify
-    align-items: $alignItems
-    align-content: $alignContent
+@import 'baseStyles'
 
 body 
     @include displayFlexProperties(column, flex-start, center)
 
 
-.background--opacity
+@import 'navigation'
+@import 'slider'
+@import 'grid'
+@import 'stats'
+@import 'cards'
+@import 'contactForm'
+
+
+.bodyBackground--opacity
     background-color: #0000009a
     min-height: 100%
     width: 80%
@@ -28,7 +25,7 @@ body
     left: 10%
     vertical-align: center
 
-.background__image
+.bodyBackground__image
     min-height: 100%
     width: 100%
     min-width: 1200px
@@ -38,101 +35,6 @@ body
     top: 0
     left: 0
     pointer-events: none
-
-.primaryContainer 
-    margin: 4rem auto
-    max-width: 1600px
-    padding: 0 9rem
-
-.secondaryContainer
-    margin: 4rem auto
-    max-width: 1800px
-    padding: 0 4rem
-
-
-h1, h2, h3, h4, h5, h6
-    margin: 20px 0 6px
-    padding: 0
-    font-family: $-primary-font
-    font-weight: 700
-    color: $-gold
-    
-
-p
-    font-family: $-secondary-font
-    font-size: 14px
-    font-weight: 300
-    line-height: 1.5em
-    margin: 8px 0 4px
-    color: white
-
-.btn
-    background-color: $-dark-gold
-    font-size: 0.8em
-    font-weight: 500
-    letter-spacing: 0.5px
-    color: white
-    padding: 0.8em 1.5em
-    border: none
-    text-align: center
-    text-decoration: none
-    font-family: $-secondary-font
-
-    &:hover
-        background-color: white
-        color: $-dark-brown
-        text-decoration: underline
-
-.hoverInputs
-    box-shadow: inset 0px 0px 15px 3px rgba(223,184,98,0.5)
-
-.focusInputs
-    background-color: $-gold
-    color: white
-    outline: none
-
-ul
-    @include displayFlexProperties(row)
-    list-style-type: none
-    a
-        padding-left: 1.5rem
-        text-decoration: none
-        text-transform: uppercase
-        font-size: 0.7rem
-        letter-spacing: 1px
-        color: $-gold
-
-.navigation__background
-    background-color: $-dark-brown
-    width: 100%
-    /* position: fixed */
-    /* margin-bottom: 2rem */
-    z-index: 3
-
-    .navigation
-        @include displayFlexProperties(row, space-between, center)
-        margin: 0 auto
-        padding: 0.75rem 8rem
-        max-width: 1600px
-
-        img
-            max-width: 150px
-
-        .navigation__itemWithIcon
-            @include displayFlexProperties(row)
-
-
-            img
-                width: 10px
-                object-fit: cover
-                margin-left: 6px
-            
-
-
-
-            
-
-        
 
 
 
@@ -166,7 +68,7 @@ ul
             @extend .focusInputs
 
 
-.banner__background
+.banner
     @include displayFlexProperties(row, center, center)
     background-image: url("/images-telecharger/crowns-banner.jpg")
     background-repeat: no-repeat
@@ -222,189 +124,3 @@ ul
         font-size: 1.2em
 
 
-        
-
-
-
-
-.statsContainer
-    @include displayFlexProperties(row, space-between)
-
-    img
-        max-width: 40%
-        margin-right: 20px
-        object-fit: cover
-
-    .statsTextContainer
-       max-width: 60%
-       padding-right: 1rem
-
-    .stats__title
-        font-size: 1.5em
-        letter-spacing: 1px
-            
-    .statsNumberContainer
-        @include displayFlexProperties(row)
-        margin: 0.6em 0
-
-        .statsNumberContainer--right
-            padding-left: 40px
-
-    .stats__numbers
-        font-weight: 700
-        font-size: 2.5em
-        color: $-dark-gold
-        margin-bottom: 0.1em
-        border-bottom: 3px solid $-dark-gold
-
-    .stats__text
-        margin: 0 auto 1.6em
-
-
-    
-
-
-.cardsSectionContainer
-    @include displayFlexProperties($justify: center, $alignItems: center)
-    margin-top: 20px
-    margin-bottom: 20px
-
-
-    .cards__title
-        font-size: 1.3em
-        letter-spacing: 1px
-        text-transform: uppercase
-        text-align: center
-
-    .cards__text
-        text-align: center
-        max-width: 60%
-
-    .cardsContainer
-        @include displayFlexProperties(row, space-between)
-        margin-top: 1.2em
-        background-image: url("/images-telecharger/cards-background.jpg")
-        background-repeat: no-repeat
-        background-size: cover
-        padding: 2.3em
-        border: $-primary-border
-
-        .card
-            @include displayFlexProperties()
-            margin-top: 10px
-
-            .card__title
-                font-size: 1.1em
-                letter-spacing: 1px
-                text-transform: uppercase
-                text-align: left
-
-
-            .card__subtitle
-                font-size: 0.7em
-                text-transform: uppercase
-                font-weight: 400
-
-            .card__img
-                max-width: 80%
-                height: 100%
-                object-fit: cover
-                border: $-primary-border
-
-            .card__icon
-                color: $-gold
-                font-size: 1.3em
-                padding-top: 0.3em
-                padding-right: 6px
-        
-        .card--left
-            margin-right: 20px
-
-        .card--right
-            margin-left: 20px
-
-
-
-.mapFormContainer
-    @include displayFlexProperties(column, flex-end)
-    
-    margin: 4rem auto
-    position: relative
-
-.map
-    z-index: -1
-    width: 100%
-    height: 100%
-    border: $-primary-border
-    position: absolute
-    top: 0
-    left: 0
-
-
-.formContainer
-    @include displayFlexProperties($direction: column, $alignItems: flex-end)
-    padding: 0
-    margin: 4rem 4rem
-
-        
-    .formContact
-        background-color: $-dark-brown
-        padding: 2em
-        border: $-primary-border
-        max-width: 40%
-
-.formContact__title
-    font-size: 1.2em
-    margin-top: 0 
-
-.formContact__text
-    margin-bottom: 1em
-
-.inputsContainer
-    @include displayFlexProperties(column)
-
-    .inputsContainer__input
-        width: 100%
-        margin-bottom: 0.5em
-        padding: 0.4em
-        font-size: 0.8em
-        font-family: $-secondary-font
-        border: $-primary-border
-        color: $-dark-gold
-
-        &:hover
-            @extend .hoverInputs
-
-        &:focus
-            @extend .focusInputs
-
-
-    .inputsContainer__input--left
-        @extend .inputsContainer__input
-        margin-right: 0.25em
-
-    .inputsContainer__input--right
-        @extend .inputsContainer__input
-        margin-left: 0.25em
-
-
-    .formNamesContainer
-        @include displayFlexProperties(row, space-between)
-        
-        .formNamesContainer--left
-            width: 100%
-            margin-right: 0.25em
-            
-        .formNamesContainer--right
-            width: 100%
-            margin-left: 0.25em
-
-.btn--contactForm
-    @extend .btn
-    margin-top: 1em
-
-.hidden
-    display: none
-
-
-    

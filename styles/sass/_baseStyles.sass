@@ -1,0 +1,65 @@
+*
+    box-sizing: border-box
+
+@mixin displayFlexProperties($direction: column, $justify: flex-start, $alignItems: stretch, $alignContent: normal)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $alignItems
+    align-content: $alignContent
+
+.hoverInputs
+    box-shadow: inset 0px 0px 15px 3px rgba(223,184,98,0.5)
+
+.focusInputs
+    background-color: $-gold
+    color: white
+    outline: none
+
+.primaryContainer 
+    margin: 4rem auto
+    max-width: 1600px
+    padding: 0 9rem
+
+.secondaryContainer
+    margin: 4rem auto
+    max-width: 1800px
+    padding: 0 4rem
+
+
+
+h1, h2, h3, h4, h5, h6
+    margin: 20px 0 6px
+    padding: 0
+    font-family: $-primary-font
+    font-weight: 700
+    color: $-gold
+    
+
+p
+    font-family: $-secondary-font
+    font-size: 14px
+    font-weight: 300
+    line-height: 1.5em
+    margin: 8px 0 4px
+    color: white
+
+.hidden
+    display: none
+
+.btn
+    background-color: $-dark-gold
+    font-size: 0.8em
+    font-weight: 500
+    letter-spacing: 0.5px
+    color: white
+    padding: 0.8em 1.5em
+    border: none
+    text-align: center
+    text-decoration: none
+    font-family: $-secondary-font
+
+    &:hover
+        background-color: white
+        color: $-dark-brown
+        text-decoration: underline

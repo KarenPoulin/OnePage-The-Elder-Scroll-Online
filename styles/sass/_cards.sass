@@ -1,0 +1,57 @@
+.cardsSectionContainer
+    @include displayFlexProperties($justify: center, $alignItems: center)
+    margin-top: 20px
+    margin-bottom: 20px
+
+.cards__title
+    font-size: 1.3em
+    letter-spacing: 1px
+    text-transform: uppercase
+    text-align: center
+
+.cards__text
+    text-align: center
+    max-width: 60%
+
+.cardsContainer
+    @include displayFlexProperties(row, space-between)
+    margin-top: 1.2em
+    background-image: url("/images-telecharger/cards-background.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 2.3em
+    border: $-primary-border
+
+.card
+    @include displayFlexProperties()
+    margin-top: 10px
+
+    .card__title
+        font-size: 1.1em
+        letter-spacing: 1px
+        text-transform: uppercase
+        text-align: left
+
+
+    .card__subtitle
+        font-size: 0.7em
+        text-transform: uppercase
+        font-weight: 400
+
+    .card__img
+        max-width: 80%
+        height: 100%
+        object-fit: cover
+        border: $-primary-border
+
+    .card__icon
+        color: $-gold
+        font-size: 1.3em
+        padding-top: 0.3em
+        padding-right: 6px
+        
+.card--left
+    margin-right: 20px
+
+.card--right
+    margin-left: 20px

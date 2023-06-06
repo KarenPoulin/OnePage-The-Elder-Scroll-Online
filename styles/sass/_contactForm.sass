@@ -1,0 +1,75 @@
+
+.mapFormContainer
+    @include displayFlexProperties(column, flex-end)
+    margin: 4rem auto
+    position: relative
+
+.map
+    z-index: -1
+    width: 100%
+    height: 100%
+    border: $-primary-border
+    position: absolute
+    top: 0
+    left: 0
+
+.formContainer
+    @include displayFlexProperties($direction: column, $alignItems: flex-end)
+    padding: 0
+    margin: 4rem 4rem
+    max-width: 1800px
+
+.formContact
+    background-color: $-dark-brown
+    padding: 2em
+    border: $-primary-border
+    max-width: 40%
+
+.formContact__title
+    font-size: 1.2em
+    margin-top: 0 
+
+.formContact__text
+    margin-bottom: 1em
+
+.inputsContainer
+    @include displayFlexProperties(column)
+
+    .inputsContainer__input
+        width: 100%
+        margin-bottom: 0.5em
+        padding: 0.4em
+        font-size: 0.8em
+        font-family: $-secondary-font
+        border: $-primary-border
+        color: $-dark-gold
+
+        &:hover
+            @extend .hoverInputs
+
+        &:focus
+            @extend .focusInputs
+
+    .inputsContainer__input--left
+        @extend .inputsContainer__input
+        margin-right: 0.25em
+
+    .inputsContainer__input--right
+        @extend .inputsContainer__input
+        margin-left: 0.25em
+
+
+.formNamesContainer
+    @include displayFlexProperties(row, space-between)
+        
+    .formNamesContainer--left
+        width: 100%
+        margin-right: 0.25em
+            
+    .formNamesContainer--right
+        width: 100%
+        margin-left: 0.25em
+
+.btn--contactForm
+    @extend .btn
+    margin-top: 1em
