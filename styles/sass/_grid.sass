@@ -34,7 +34,7 @@
         @include grid__image--position(3 / span 2, 5 / span 4)
 
 
-@media screen and (max-width: 900px)
+@media screen and (max-width: 1000px)
     .gridContainer
         display: grid
         grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr
@@ -43,10 +43,6 @@
         
 
         @mixin grid__image--position($column, $row)
-            height: 100%
-            width: 100%
-            object-fit: cover
-            border: $-primary-border
             grid-column: $column
             grid-row: $row
 
@@ -75,14 +71,10 @@
         display: grid
         grid-template-columns: 0.3fr 1fr 1fr 0.3fr
         grid-template-rows: 1fr 0.5fr 1fr 0.5fr
-        gap: 0.8em
+        gap: 0.9em
         
 
         @mixin grid__image--position($column, $row)
-            height: 100%
-            width: 100%
-            object-fit: cover
-            border: $-primary-border
             grid-column: $column
             grid-row: $row
 
@@ -90,7 +82,7 @@
             @include grid__image--position(span 2, 4 / span 1)
             
         .grid__image2
-            @include grid__image--position(2 / span 2, span 1)
+            @include grid__image--position(1 / span 4, span 1)
 
         .grid__image3
             @include grid__image--position(3 / span 2, 2 / span 1)
@@ -102,4 +94,4 @@
             @include grid__image--position(3 / span 2, 4 / span 1)
 
         .grid__image6
-            @include grid__image--position(2 / span 2, 3 / span 1)
+            @include grid__image--position(1 / span 4, 3 / span 1)

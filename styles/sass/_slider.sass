@@ -5,7 +5,7 @@
 
     
 .sliderContainer 
-    @include positionHeightWidth(relative, $height: 500px)
+    @include positionHeightWidth(relative, $height: 1200px)
     overflow: hidden
     margin: 0 auto 4rem
     font-family: $-secondary-font
@@ -122,6 +122,7 @@
     &:target ~ .slider__img
         transform: translateX(-100%)
         -webkit-transform: translateX(-100%)
+        margin-left: -12px
 
 
 #s3
@@ -138,6 +139,7 @@
     &:target ~ .slider__img
         transform: translateX(-200%)
         -webkit-transform: translateX(-200%)
+        margin-left: -12px
 
 
 #s4
@@ -154,4 +156,48 @@
     &:target ~ .slider__img
         transform: translateX(-300%)
         -webkit-transform: translateX(-300%)
+        margin-left: -12px
                 
+
+@media screen and (max-width: 2200px)
+    .sliderContainer 
+        @include positionHeightWidth(relative, $height: 800px)
+
+
+@media screen and (max-width: 1500px)
+    .sliderContainer 
+        @include positionHeightWidth(relative, $height: 650px)
+
+@media screen and (max-width: 1150px)
+    .sliderContainer 
+        @include positionHeightWidth(relative, $height: 550px)
+
+@media screen and (max-width: 1000px)
+    .sliderContainer 
+        @include positionHeightWidth(relative, $height: 450px)
+
+    .sliderContainer 
+        .slider__prevNextBtn
+            @include positionHeightWidth(absolute, 0, 100%)
+            font-size: 1.8em
+
+            a
+                @include positionHeightWidth(absolute, 50px, 50px)
+                line-height: 50px
+
+@media screen and (max-width: 700px)
+    .sliderContainer 
+        @include positionHeightWidth(relative, $height: 400px)
+
+    .sliderContainer 
+        .slider__prevNextBtn
+            @include positionHeightWidth(absolute, 0, 100%)
+            font-size: 1.5em
+
+            a
+                @include positionHeightWidth(absolute, 40px, 40px)
+                line-height: 40px
+
+        .slider__bulletsBtn      
+            > a
+                @include positionHeightWidth($height: 12px, $width: 12px) 
