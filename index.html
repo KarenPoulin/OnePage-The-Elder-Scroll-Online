@@ -282,29 +282,41 @@
                         <div class="inputsContainer">
                             <div class="formNamesContainer">
                                 <div class="formNamesContainer--left inputControl">
-                                    <label for="txtLastName" class="hidden">Nom de famille</label>
-                                    <input class="inputsContainer__input--left" id="txtLastName" name="lastName" type="text" placeholder="Nom de famille">
+                                    <div class="inputControl--row">
+                                        <label for="txtLastName" class="hidden">Nom de famille</label>
+                                        <input class="inputsContainer__input--left" id="txtLastName" name="lastName" type="text" placeholder="Nom de famille" min="2" max="50" required>
+                                        <span class="inputControl__required--leftOffset">*</span>
+                                    </div>
                                     <div class="errorMessage"></div>
                                 </div>
 
                                 <div class="formNamesContainer--right inputControl">
-                                    <label for="txtFirstName" class="hidden">Prénom</label>
-                                    <input class="inputsContainer__input--right" id="txtFirstName" name="firstName" type="text" placeholder="Prénom">
+                                    <div class="inputControl--row">
+                                        <label for="txtFirstName" class="hidden">Prénom</label>
+                                        <input class="inputsContainer__input" id="txtFirstName" name="firstName" type="text" placeholder="Prénom" min="2" max="50" required>
+                                        <span class="inputControl__required">*</span>
+                                    </div>
                                     <div class="errorMessage"></div>
                                 </div>
                             </div>
 
 
                             <div class="inputControl">
-                                <label for="email" class="hidden">Courriel</label>
-                                <input class="inputsContainer__input" id="email" type="email" name="email" placeholder="Courriel">
+                                <div class="inputControl--row">
+                                    <label for="email" class="hidden">Courriel</label>
+                                    <input class="inputsContainer__input" id="email" type="email" name="email" placeholder="Courriel" required>
+                                    <span class="inputControl__required">*</span>
+                                </div>
                                 <div class="errorMessage"></div>
                             </div>
 
 
                             <div class="inputControl">
-                                <label for="txtMessage" class="hidden">Message</label>
-                                <textarea class="inputsContainer__input" name="message" id="txtMessage" cols="30" rows="10" placeholder="Message"></textarea>
+                                <div class="inputControl--row">
+                                    <label for="txtMessage" class="hidden">Message</label>
+                                    <textarea class="inputsContainer__input" name="message" id="txtMessage" cols="30" rows="10" min="2" max="2000" placeholder="Message"></textarea required>
+                                    <span class="inputControl__required">*</span>        
+                                </div>
                                 <div class="errorMessage"></div>
                             </div>
                         </div>

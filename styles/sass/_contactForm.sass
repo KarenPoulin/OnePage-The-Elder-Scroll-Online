@@ -19,6 +19,20 @@
     padding: 0
     margin: 4rem 4rem
 
+
+.inputControl--row
+    display: flex
+    flex-direction: row
+
+.inputControl__required
+    color: white
+    font-size: 0.8em
+    margin-left: 4px
+
+.inputControl__required--leftOffset
+    @extend .inputControl__required
+    margin-left: -4px
+
 .formContact
     background-color: $-dark-brown
     padding: 2em
@@ -52,11 +66,7 @@
 
     .inputsContainer__input--left
         @extend .inputsContainer__input
-        margin-right: 0.25em
-
-    .inputsContainer__input--right
-        @extend .inputsContainer__input
-        margin-left: 0.25em
+        margin-right: 0.5em
 
 
 .formNamesContainer
@@ -84,5 +94,40 @@
 
     > .errorMessage
         color: rgb(226, 43, 107)
-        font-size: 9px
-        height: 13px
+        font-size: 0.8em
+        padding-bottom: 0.5em
+
+
+@media screen and (max-width: 1300px)
+    .formContact
+        max-width: 50%
+
+@media screen and (max-width: 1000px)
+    .formContact
+        max-width: 60%
+
+    .formNamesContainer
+        @include displayFlexProperties(column)
+            
+        .formNamesContainer--left
+            width: 100%
+            margin-right: 0.25em
+                    
+        .formNamesContainer--right
+            width: 100%
+            margin-left: 0
+
+@media screen and (max-width: 800px)
+    .formContact
+        max-width: 80%
+    
+    .formContainer
+        @include displayFlexProperties($direction: column, $alignItems: center)
+
+@media screen and (max-width: 700px)
+    .formContact
+        max-width: 90%
+
+@media screen and (max-width: 600px)
+    .formContact
+        max-width: 100%

@@ -56,8 +56,8 @@ const setError = (element, message) => {
     const errorDisplay = inputControl.querySelector('.errorMessage');
 
     errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
+    element.classList.add('error');
+    element.classList.remove('success');
 }
 
 const setSuccess = (element) => {
@@ -65,6 +65,6 @@ const setSuccess = (element) => {
     const errorDisplay = inputControl.querySelector('.errorMessage');
 
     errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+    element.classList.add('success');
+    element.classList.remove('error');
 }
