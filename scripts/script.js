@@ -1,5 +1,4 @@
 const validateForm = () => {
-    
     const lastName = document.getElementById('txtLastName');
     const firstName = document.getElementById('txtFirstName');
     const email = document.getElementById('email');
@@ -52,7 +51,8 @@ const validateEmail = (email) => {
 }
 
 const setError = (element, message) => {
-    const inputControl = element.parentElement;
+    const inputControlRow = element.parentElement;
+    const inputControl = inputControlRow.parentElement;
     const errorDisplay = inputControl.querySelector('.errorMessage');
 
     errorDisplay.innerText = message;
@@ -61,9 +61,10 @@ const setError = (element, message) => {
 }
 
 const setSuccess = (element) => {
-    const inputControl = element.parentElement;
+    const inputControlRow = element.parentElement;
+    const inputControl = inputControlRow.parentElement;
     const errorDisplay = inputControl.querySelector('.errorMessage');
-
+    
     errorDisplay.innerText = '';
     element.classList.add('success');
     element.classList.remove('error');

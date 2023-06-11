@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/script.js" defer></script>
     <link rel="stylesheet" href="styles/css/style.css">
     <link rel="stylesheet" href="styles/css/normalize.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -269,7 +268,7 @@
         <section class="mapFormContainer">
             <div class="formContainer">
                 <form id="formContact" class="formContact" action="confirmation.html" method="post" onsubmit="return validateForm()" novalidate>
-                    
+
                         <h4 class="formContact__title">Envoyez-nous un message</h4>
                         <p class="formContact__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est vel soluta adipisci animi alias.</p>
 
@@ -308,7 +307,7 @@
                             <div class="inputControl">
                                 <div class="inputControl--row">
                                     <label for="txtMessage" class="hidden">Message</label>
-                                    <textarea class="inputsContainer__input" name="message" id="txtMessage" cols="30" rows="10" min="2" max="2000" placeholder="Message"></textarea required>
+                                    <textarea class="inputsContainer__input" name="message" id="txtMessage" cols="30" rows="10" min="2" max="2000" placeholder="Message" required></textarea>
                                     <span class="inputControl__required">*</span>        
                                 </div>
                                 <div class="errorMessage"></div>
@@ -317,14 +316,14 @@
 
                         <div>
                             <label for="submitBtn" class="hidden">Soumettre</label>
-                            <button class="btn--contactForm" id="submitBtn">Soumettre</button>
+                            <button class="btn--contactForm" type="submit" id="submitBtn">Soumettre</button>
                         </div>
                     
                 </form>
             </div>
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198310.23080983723!2d-77.58549943788563!3d39.04729892998891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cd5858a17331%3A0xfe07c9af2680e583!2sBethesda%20Softworks%20LLC!5e0!3m2!1sfr!2sca!4v1685994754753!5m2!1sfr!2sca"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section> 
-
+        <script src="scripts/script.js"></script>
     </main>
 
 
