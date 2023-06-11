@@ -2,7 +2,9 @@
 @import 'baseStyles'
 
 body 
-    @include displayFlexProperties(column, flex-start, center)
+    // @include displayFlexProperties(column, flex-start, center)
+    margin: 0 auto
+    width: 100%
 
 
 @import 'navigation'
@@ -46,8 +48,7 @@ body
     margin: 4rem auto 1.5rem
 
 .newsletter__text
-    max-width: 50%
-    font-size: 0.6em
+    max-width: 70%
     margin-bottom: 1em
 
 .formNewsletter
@@ -78,7 +79,7 @@ body
     margin-top: -2rem
 
     img
-        max-width: 120px
+        max-width: 180px
         padding-right: 1.8em
 
     .btn--brown
@@ -99,7 +100,7 @@ body
 
     .presentation__title 
         letter-spacing: 1px
-        font-size: 2em
+        font-size: 2.4em
         text-transform: uppercase
         margin-bottom: 6px
 
@@ -124,3 +125,60 @@ body
         font-size: 1.2em
 
 
+
+
+@media screen and (max-width: 1200px)
+    .presentationSection
+        .presentation__title 
+            font-size: 2em
+
+    
+@media screen and (max-width: 1000px)
+    .presentationSection
+        .presentation__title 
+            font-size: 1.7em
+
+
+
+@media screen and (max-width: 800px)
+    .presentationSection
+        .presentation__title 
+            font-size: 1.5em
+
+    .banner
+        margin-top: -1rem
+
+        img
+            max-width: 150px
+
+    .presentationSection__3col
+        .column
+            padding: 10px 20px
+
+        .presentation__img
+            width: 40px
+            
+        .presentation__subtitle
+            font-size: 1.1em
+
+
+@media screen and (max-width: 700px)
+    .presentationSection__3col
+        @include displayFlexProperties($direction: column,  $alignItems:center)
+        .column
+            padding: 14px 30px
+
+        .presentation__img
+            width: 40px
+            
+        .presentation__subtitle
+            margin: 10px auto
+            font-size: 1.1em
+
+
+@media screen and (max-width: 600px)
+    .banner
+        padding-top: 0.7em
+
+        img
+            max-width: 120px

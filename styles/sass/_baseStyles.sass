@@ -19,12 +19,12 @@
 .primaryContainer 
     margin: 4rem auto
     max-width: 1600px
-    padding: 0 9rem
+    width: 80%
 
 .secondaryContainer
     margin: 4rem auto
     max-width: 1800px
-    padding: 0 4rem
+    width: 90%
 
 
 
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6
 
 p
     font-family: $-secondary-font
-    font-size: 14px
+    font-size: 16px
     font-weight: 300
     line-height: 1.5em
     margin: 8px 0 4px
@@ -49,7 +49,7 @@ p
 
 .btn
     background-color: $-dark-gold
-    font-size: 0.8em
+    font-size: 0.9em
     font-weight: 500
     letter-spacing: 0.5px
     color: white
@@ -63,3 +63,22 @@ p
         background-color: white
         color: $-dark-brown
         text-decoration: underline
+
+
+
+@media screen and (max-width: 800px)
+    .primaryContainer 
+        margin: 3rem auto
+
+    .secondaryContainer
+        margin: 3rem auto
+
+    p
+        font-size: 14px
+
+
+@media screen and (max-width: 700px)
+    .btn
+        font-size: 0.8em
+        font-weight: 500
+        padding: 0.7em 1.3em

@@ -2,7 +2,7 @@
     display: grid
     grid-template-columns: 1.3fr 1fr 1.3fr 1fr 1fr
     grid-template-rows: 3fr 1fr 1fr 3fr 3fr 1fr 1fr 3fr
-    gap: 20px 14px
+    gap: 1.2em 0.8em
         
     %grid__imagesProperty
         height: 100%
@@ -32,3 +32,74 @@
 
     .grid__image6
         @include grid__image--position(3 / span 2, 5 / span 4)
+
+
+@media screen and (max-width: 900px)
+    .gridContainer
+        display: grid
+        grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr 0.3fr
+        gap: 0.8em
+        
+
+        @mixin grid__image--position($column, $row)
+            height: 100%
+            width: 100%
+            object-fit: cover
+            border: $-primary-border
+            grid-column: $column
+            grid-row: $row
+
+        .grid__image1
+            @include grid__image--position(span 2, 3 / span 2)
+            
+        .grid__image2
+            @include grid__image--position(3 / span 2, 2 / span 2)
+
+        .grid__image3
+            @include grid__image--position(3 / span 1, 4 / span 1)
+
+        .grid__image4
+            @include grid__image--position(2 / span 1, span 2)
+
+        .grid__image5
+            @include grid__image--position(4 / span 2, 4 / span 2)
+
+        .grid__image6
+            @include grid__image--position(2 / span 2, 5 / span 2)
+
+
+
+@media screen and (max-width: 700px)
+    .gridContainer
+        display: grid
+        grid-template-columns: 0.3fr 1fr 1fr 0.3fr
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr
+        gap: 0.8em
+        
+
+        @mixin grid__image--position($column, $row)
+            height: 100%
+            width: 100%
+            object-fit: cover
+            border: $-primary-border
+            grid-column: $column
+            grid-row: $row
+
+        .grid__image1
+            @include grid__image--position(span 2, 4 / span 1)
+            
+        .grid__image2
+            @include grid__image--position(2 / span 2, span 1)
+
+        .grid__image3
+            @include grid__image--position(3 / span 2, 2 / span 1)
+
+        .grid__image4
+            @include grid__image--position(1 / span 2, 2 / span 1)
+
+        .grid__image5
+            @include grid__image--position(3 / span 2, 4 / span 1)
+
+        .grid__image6
+            @include grid__image--position(2 / span 2, 3 / span 1)

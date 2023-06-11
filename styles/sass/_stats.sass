@@ -4,7 +4,7 @@
     img
         max-width: 40%
         margin-right: 20px
-        object-fit: cover
+        object-fit: contain
 
 .statsTextContainer
     max-width: 60%
@@ -30,3 +30,32 @@
 
 .stats__text
     margin: 0 auto 1.6em
+
+
+
+@media screen and (max-width: 900px)
+    .stats__numbers
+        font-size: 1.9em
+        margin-bottom: 0.1em
+        border-bottom: 3px solid $-dark-gold
+            
+
+@media screen and (max-width: 700px)
+    .statsContainer
+        @include displayFlexProperties(column, flex-start, center)
+        text-align: center
+
+        img
+            max-width: 40%
+            margin-right: 0
+
+    .statsTextContainer
+        max-width: 80%
+        padding-right: 0
+
+    .statsNumberContainer
+        @include displayFlexProperties(row, center)
+        margin: 0.6em 0
+
+        .statsNumberContainer--right
+            padding-left: 40px

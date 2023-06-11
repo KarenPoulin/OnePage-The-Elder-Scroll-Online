@@ -22,18 +22,21 @@
     padding: 2.3em
     border: $-primary-border
 
+.cardsContainer--twoRows
+    @include displayFlexProperties(row, space-between)
+
 .card
     @include displayFlexProperties()
     margin-top: 10px
 
     .card__title
-        font-size: 1.1em
+        font-size: 1.3em
         letter-spacing: 1px
         text-transform: uppercase
         text-align: left
 
     .card__subtitle
-        font-size: 0.7em
+        font-size: 0.8em
         text-transform: uppercase
         font-weight: 400
 
