@@ -1,13 +1,16 @@
-ul
-    @include displayFlexProperties(row)
-    list-style-type: none
-    a
-        padding-left: 1.5rem
-        text-decoration: none
-        text-transform: uppercase
-        font-size: 0.8rem
-        letter-spacing: 1px
-        color: $-gold
+nav
+    ul
+        @include displayFlexProperties(row)
+        list-style-type: none
+        a
+            padding-left: 1.5rem
+            text-decoration: none
+            text-transform: uppercase
+            font-size: 0.8rem
+            letter-spacing: 1px
+            color: $-gold
+            &:hover
+                color: white
 
 .navigation__background
     background-color: $-dark-brown
@@ -37,25 +40,28 @@ ul
     display: none
 
 @media screen and (max-width: 1200px)
-    ul
-        a
-            padding-left: 1.4rem
-            font-size: 0.6rem
+    nav
+        ul
+            a
+                padding-left: 1.4rem
+                font-size: 0.6rem
 
 @media screen and (max-width: 1000px)
-    ul
-        a
-            padding-left: 1rem
-            font-size: 0.5rem
+    nav
+        ul
+            a
+                padding-left: 1rem
+                font-size: 0.5rem
 
-    .navigation
-        padding: 0.5rem 0
-        img
-            max-width: 110px
+        .navigation
+            padding: 0.5rem 0
+            img
+                max-width: 110px
 
 @media screen and (max-width: 850px)
-    ul
-        display: none
+    nav
+        ul
+            display: none
 
-    .navigation__hamburger
-        display: block
+        .navigation__hamburger
+            display: block

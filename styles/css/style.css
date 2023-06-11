@@ -91,7 +91,7 @@ body {
   width: 100%;
 }
 
-ul {
+nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -99,13 +99,16 @@ ul {
   align-content: normal;
   list-style-type: none;
 }
-ul a {
+nav ul a {
   padding-left: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 1px;
   color: #dfb862;
+}
+nav ul a:hover {
+  color: white;
 }
 
 .navigation__background {
@@ -149,28 +152,28 @@ ul a {
 }
 
 @media screen and (max-width: 1200px) {
-  ul a {
+  nav ul a {
     padding-left: 1.4rem;
     font-size: 0.6rem;
   }
 }
 @media screen and (max-width: 1000px) {
-  ul a {
+  nav ul a {
     padding-left: 1rem;
     font-size: 0.5rem;
   }
-  .navigation {
+  nav .navigation {
     padding: 0.5rem 0;
   }
-  .navigation img {
+  nav .navigation img {
     max-width: 110px;
   }
 }
 @media screen and (max-width: 850px) {
-  ul {
+  nav ul {
     display: none;
   }
-  .navigation__hamburger {
+  nav .navigation__hamburger {
     display: block;
   }
 }
@@ -850,6 +853,163 @@ ul a {
 @media screen and (max-width: 600px) {
   .formContact {
     max-width: 100%;
+  }
+}
+.footer__logo {
+  max-width: 240px;
+}
+
+.footerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+  width: 90%;
+  margin-bottom: 2em;
+}
+.footerMenu .footerMenu__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: normal;
+  list-style-type: none;
+  padding: 0;
+}
+.footerMenu .footerMenu__nav a {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #dfb862;
+  padding: 0.5em;
+  text-decoration: none;
+}
+.footerMenu .footerMenu__nav a:hover {
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: normal;
+  width: 80%;
+  margin-top: 1em;
+}
+.footer p {
+  color: #dfb862;
+}
+.footer .footer_mediaIcons {
+  padding: 0 0.2em;
+  color: #dfb862;
+  font-size: 1.1em;
+}
+.footer .footer_mediaIcons:hover {
+  color: white;
+}
+.footer .footer__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: normal;
+}
+.footer .footer__contact a {
+  padding-left: 0.6em;
+  color: #dfb862;
+  text-decoration: none;
+}
+.footer .footer__contact a:hover {
+  color: white;
+}
+.footer .footer__contact p:hover {
+  color: white;
+}
+.footer .footer__contact .footer__contact--left {
+  padding-left: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer__logo {
+    max-width: 200px;
+  }
+  .footerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+  }
+  .footerMenu .footerMenu__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: normal;
+  }
+  .footerMenu .footerMenu__nav a {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+  .footer .footer_mediaIcons {
+    font-size: 0.9em;
+  }
+  .footer .footer__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: normal;
+  }
+  .footer .footer__contact a {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 900px) {
+  .footer__logo {
+    max-width: 180px;
+  }
+  .footerMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+  }
+  .footerMenu .footerMenu__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+  }
+  .footerMenu .footerMenu__nav a {
+    font-size: 0.6rem;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: normal;
+  }
+  .footer > * {
+    margin-top: 0.2em;
+  }
+  .footer .footer_mediaIcons {
+    font-size: 0.9em;
+  }
+  .footer .footer__contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: normal;
+  }
+  .footer .footer__contact a {
+    font-size: 0.9em;
   }
 }
 .bodyBackground--opacity {
