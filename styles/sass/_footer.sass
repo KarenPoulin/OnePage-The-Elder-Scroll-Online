@@ -1,4 +1,5 @@
 .footer__logo
+    margin-bottom: 1em
     max-width: 240px
 
 .footerMenu
@@ -7,22 +8,24 @@
     margin-bottom: 2em
     .footerMenu__nav
         @include displayFlexProperties(row, space-around, center)
-        list-style-type: none
-        padding: 0
-        a
-            text-transform: uppercase
-            font-size: 0.8rem
-            letter-spacing: 1px
-            color: $-gold
-            padding: 0.5em
-            text-decoration: none
-            &:hover
-                color: white
+        .footerMenu__nav--2col
+            @include displayFlexProperties(row, space-around, center)
+            list-style-type: none
+            padding: 0
+            a
+                text-transform: uppercase
+                font-size: 0.8rem
+                letter-spacing: 1px
+                color: $-gold
+                padding: 0.5em
+                text-decoration: none
+                &:hover
+                    color: white
 
 .footer
     @include displayFlexProperties(row, space-between, center)
     width: 80%
-    margin-top: 1em
+    margin-top: 2em
     p
         color: $-gold
     .footer_mediaIcons
@@ -47,18 +50,18 @@
             padding-left: 0
 
 
+@media screen and (max-width: 1440px)
+    .footerMenu
+        .footerMenu__nav
+            @include displayFlexProperties(column, flex-start, center)
+            .footerMenu__nav--2col
+                margin-bottom: 0
+                margin-top: 0.5em
+
 @media screen and (max-width: 1000px)
     .footer__logo
         max-width: 200px
 
-    .footerMenu
-        @include displayFlexProperties(column, flex-start, center)
-        .footerMenu__nav
-            @include displayFlexProperties(row, space-around, center)
-            a
-                font-size: 0.6rem
-                letter-spacing: 1px
-    
     .footer
         .footer_mediaIcons
             font-size: 0.9em
@@ -90,3 +93,16 @@
             @include displayFlexProperties(row, $alignItems: baseline)
             a
                 font-size: 0.9em
+
+@media screen and (max-width: 760px)
+
+.footerMenu
+    .footerMenu__nav
+        @include displayFlexProperties(column, flex-start, center)
+        .footerMenu__nav--2col
+            @include displayFlexProperties(column, flex-start, center)
+            list-style-type: none
+            margin: 0 
+            padding: 0
+            li
+                margin-top: 0.3em
