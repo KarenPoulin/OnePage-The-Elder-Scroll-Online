@@ -3,6 +3,13 @@
     height: $height
     width: $width
 
+%slider-btns
+    text-align: center
+    text-decoration: none
+    color: #fff
+    -webkit-transition: 0.3s
+    transition: 0.3s
+    background: $-dark-gold-opacity
     
 .sliderContainer 
     @include positionHeightWidth(relative, $height: 1200px)
@@ -12,7 +19,6 @@
     border-top: $-primary-border
     border-bottom: $-primary-border
     
-
     .slider__img
         @include positionHeightWidth($height: 100%)
         white-space: nowrap
@@ -38,13 +44,8 @@
         
         a
             @include positionHeightWidth(absolute, 60px, 60px)
-            background: $-dark-gold-opacity
+            @extend %slider-btns
             line-height: 60px
-            text-align: center
-            text-decoration: none
-            color: #fff
-            -webkit-transition: 0.3s
-            transition: 0.3s
             -webkit-transform: translateY(-50%)
             transform: translateY(-50%)
             left: 0
@@ -68,16 +69,11 @@
     
         > a
             @include positionHeightWidth($height: 20px, $width: 20px) 
+            @extend %slider-btns
             display: inline-block
             border-radius: 50%
             line-height: 20px
             margin: 0 10px
-            color: #fff
-            text-decoration: none
-            text-align: center
-            background: $-dark-gold-opacity
-            -webkit-transition: 0.3s
-            transition: 0.3s
         
             &:hover
                 background: $-dark-gold !important

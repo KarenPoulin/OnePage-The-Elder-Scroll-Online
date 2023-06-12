@@ -51,7 +51,6 @@ body
 
 
 
-
 .newsletterSection
     @include displayFlexProperties(column, flex-start, center) 
     text-align: center
@@ -66,18 +65,16 @@ body
     @include displayFlexProperties(row, center, center)
 
     .formNewsletter__email
+        @extend %inputs
         margin-right: 1em
-        padding: 0.4em
-        font-size: 0.8em
-        font-family: $-secondary-font
-        border: $-primary-border
-        color: $-dark-gold
 
         &:hover
-            @extend .hoverInputs
+            @extend %hoverInputs
 
         &:focus
-            @extend .focusInputs
+            @extend %focusInputs
+
+
 
 
 .banner
@@ -92,19 +89,6 @@ body
     img
         max-width: 180px
         padding-right: 1.8em
-
-    .btn--brown
-        background-color: $-dark-brown
-
-        &:hover
-            background-color: white
-            color: $-dark-brown
-            text-decoration: underline
-        &:focus
-            background-color: white
-            color: $-dark-brown
-            text-decoration: underline
-
 
 
 
@@ -135,7 +119,6 @@ body
         width: 50px
         object-fit: cover
         
-
     .presentation__subtitle
         font-size: 1.2em
 

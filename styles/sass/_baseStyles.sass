@@ -8,14 +8,6 @@
     align-items: $alignItems
     align-content: $alignContent
 
-.hoverInputs
-    box-shadow: inset 0px 0px 15px 3px rgba(223,184,98,0.5)
-
-.focusInputs
-    background-color: $-gold
-    color: white
-    outline: none
-
 .primaryContainer 
     margin: 4rem auto
     width: 80%
@@ -24,7 +16,6 @@
     margin: 4rem auto
     width: 90%
 
-
 h1, h2, h3, h4, h5, h6
     margin: 20px 0 6px
     padding: 0
@@ -32,7 +23,6 @@ h1, h2, h3, h4, h5, h6
     font-weight: 700
     color: $-gold
     
-
 p
     font-family: $-secondary-font
     font-size: 18px
@@ -43,6 +33,16 @@ p
 
 .hidden
     display: none
+
+%btn--hover-focus    
+    background-color: white
+    color: $-dark-brown
+    text-decoration: underline
+
+%btn--brown--hover-focus
+    background-color: white
+    color: $-dark-brown
+    text-decoration: underline
 
 .btn
     background-color: $-dark-gold
@@ -55,15 +55,40 @@ p
     text-align: center
     text-decoration: none
     font-family: $-secondary-font
-
     &:hover
-        background-color: white
-        color: $-dark-brown
-        text-decoration: underline
+        @extend %btn--hover-focus
     &:focus
-        background-color: white
-        color: $-dark-brown
-        text-decoration: underline
+        @extend %btn--hover-focus
+
+.btn--brown
+    @extend .btn
+    background-color: $-dark-brown
+    &:hover
+        @extend %btn--brown--hover-focus
+    &:focus
+        @extend %btn--brown--hover-focus
+
+%hoverInputs
+    box-shadow: inset 0px 0px 15px 3px rgba(223,184,98,0.5)
+
+%focusInputs
+    background-color: $-gold
+    color: white
+    outline: none
+
+%inputs
+    padding: 0.4em
+    font-size: 0.8em
+    font-family: $-secondary-font
+    border: $-primary-border
+    color: $-dark-gold
+
+%nav--elements
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 1px
+    font-size: 0.8rem
+    color: $-gold
 
 @media screen and (max-width: 1200px)
     p
