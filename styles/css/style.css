@@ -303,17 +303,17 @@ nav ul a:focus {
   border: white 2px solid;
 }
 .sliderContainer .slider__bulletsBtn > a + a {
-  background: dark-gold-opacity;
+  background-color: rgba(227, 172, 54, 0.6);
 }
 .sliderContainer > s:target ~ .slider__bulletsBtn > * {
-  background: dark-gold-opacity;
+  background-color: rgba(227, 172, 54, 0.6);
 }
 .sliderContainer > s:target ~ .slider__prevNextBtn > * {
   visibility: hidden;
 }
 
 #s1:target ~ .slider__bulletsBtn > *:nth-child(1) {
-  background: #fff;
+  background-color: #fff;
 }
 #s1:target ~ .slider__prevNextBtn > *:nth-child(1) {
   visibility: visible;
@@ -324,7 +324,7 @@ nav ul a:focus {
 }
 
 #s2:target ~ .slider__bulletsBtn > *:nth-child(2) {
-  background: #fff;
+  background-color: #fff;
 }
 #s2:target ~ .slider__prevNextBtn > *:nth-child(2) {
   visibility: visible;
@@ -336,7 +336,7 @@ nav ul a:focus {
 }
 
 #s3:target ~ .slider__bulletsBtn > *:nth-child(3) {
-  background: #fff;
+  background-color: #fff;
 }
 #s3:target ~ .slider__prevNextBtn > *:nth-child(3) {
   visibility: visible;
@@ -348,7 +348,7 @@ nav ul a:focus {
 }
 
 #s4:target ~ .slider__bulletsBtn > *:nth-child(4) {
-  background: #fff;
+  background-color: #fff;
 }
 #s4:target ~ .slider__prevNextBtn > *:nth-child(4) {
   visibility: visible;
