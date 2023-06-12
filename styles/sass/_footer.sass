@@ -6,6 +6,12 @@
     @include displayFlexProperties(column, flex-start, center)
     width: 90%
     margin-bottom: 2em
+
+    a
+        &:focus
+                border: white 2px solid
+                padding: 0.2em
+
     .footerMenu__nav
         @include displayFlexProperties(row, space-around, center)
         .footerMenu__nav--2col
@@ -21,6 +27,8 @@
                 text-decoration: none
                 &:hover
                     color: white
+                &:focus
+                    color: white
 
 .footer
     @include displayFlexProperties(row, space-between, center)
@@ -34,6 +42,8 @@
         font-size: 1.1em
         &:hover
             color: white
+        &:focus
+            color: white
     
     .footer__contact
         @include displayFlexProperties(row, $alignItems: baseline)
@@ -43,8 +53,11 @@
             text-decoration: none
             &:hover
                 color: white
+            
         p
             &:hover
+                color: white                 
+            &:focus
                 color: white
         .footer__contact--left
             padding-left: 0
@@ -83,7 +96,7 @@
                 font-size: 0.6rem
     
     .footer
-        @include displayFlexProperties(column, $alignItems: center)
+        @include displayFlexProperties(column-reverse, $alignItems: center)
         > *
             margin-top: 0.2em
         .footer_mediaIcons
@@ -95,14 +108,13 @@
                 font-size: 0.9em
 
 @media screen and (max-width: 760px)
-
-.footerMenu
-    .footerMenu__nav
-        @include displayFlexProperties(column, flex-start, center)
-        .footerMenu__nav--2col
+    .footerMenu
+        .footerMenu__nav
             @include displayFlexProperties(column, flex-start, center)
-            list-style-type: none
-            margin: 0 
-            padding: 0
-            li
-                margin-top: 0.3em
+            .footerMenu__nav--2col
+                @include displayFlexProperties(column, flex-start, center)
+                list-style-type: none
+                margin: 0 
+                padding: 0
+                li
+                    margin-top: 0.3em

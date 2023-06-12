@@ -42,7 +42,6 @@
 
     .card__img
         max-width: 90%
-        height: 100%
         object-fit: cover
         border: $-primary-border
 
@@ -54,7 +53,11 @@
 
         &:hover
             color: white
-        
+    a
+        &:focus
+            border: white 2px solid
+            padding: 0.8em 0.2em 0.2em 0.4em
+
 @media screen and (max-width: 1130px)
     .card
         .card__title
