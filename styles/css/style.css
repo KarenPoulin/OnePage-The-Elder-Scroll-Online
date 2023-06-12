@@ -417,6 +417,9 @@ nav ul a:focus {
     width: 40px;
     line-height: 40px;
   }
+  .sliderContainer .slider__prevNextBtn a img {
+    width: 20px;
+  }
   .sliderContainer .slider__bulletsBtn > a {
     position: static;
     height: 12px;
