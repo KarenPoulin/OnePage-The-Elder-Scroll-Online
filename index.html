@@ -13,13 +13,14 @@
 </head>
 
 <body>
-    <picture>
-        <source srcset="images/background.jpg">
-        <img class="bodyBackground__image" srcset="" alt="Image de fond du siteweb" loading="lazy">
+    <!-- BACKGROUND -->
+    <picture>  
+        <img class="bodyBackground__image" src="images/background.jpg" srcset="images/background.jpg" alt="Image de fond du siteweb" loading="lazy">
     </picture>
-
     <div class="bodyBackground--opacity"></div>
 
+
+    <!-- NAVIGATION -->
     <header class="navigation__background">
         <section class="navigation">
             <a href="index.html">
@@ -27,14 +28,10 @@
             </a>
                 <nav>
                     <ul>
-                        <div class="navigation__itemWithIcon" >
-                            <li><a href="">À propos de ESO</a></li>
-                            <img src="images/navigation-in-game-icons-position.png" alt="Icône de position" loading="lazy">
-                        </div>
-                        <div class="navigation__itemWithIcon" >
-                            <li><a href="">Découvrez les DLC</a></li>
-                            <img src="images/navigation-in-game-icons-position.png" alt="Icône de position" loading="lazy">
-                        </div>
+                        <li><a href="">À propos de ESO</a></li>
+                        <li><img class="navigation__icon" src="images/navigation-in-game-icons-position.png" alt="Icône de position" loading="lazy"></li>
+                        <li><a href="">Découvrez les DLC</a></li>
+                        <li><img class="navigation__icon" src="images/navigation-in-game-icons-position.png" alt="Icône de position" loading="lazy"></li>
                         <li><a href="">Boutique à Couronnes</a></li>
                         <li><a href="">Contactez-nous</a></li>
                     </ul>
@@ -43,6 +40,7 @@
         </section>
     </header> 
 
+    <!-- MAIN PAGE -->
     <main id="content">
         <a class="screen-reader-text" href="#content">Aller au contenu principal</a>
         <!-- SLIDER -->
@@ -60,10 +58,10 @@
             </div>
 
             <div class="slider__prevNextBtn">
-                <div><a href="#s4"><</a><a href="#s2">></a></div>
-                <div><a href="#s1"><</a><a href="#s3">></a></div>
-                <div><a href="#s2"><</a><a href="#s4">></a></div>
-                <div><a href="#s3"><</a><a href="#s1">></a></div>
+                <div><a href="#s4"></a><a href="#s2"></a></div>
+                <div><a href="#s1"></a><a href="#s3"></a></div>
+                <div><a href="#s2"></a><a href="#s4"></a></div>
+                <div><a href="#s3"></a><a href="#s1"></a></div>
             </div>
 
             
@@ -76,14 +74,11 @@
         </section>
 
 
-
-
-
         <!-- NEWSLETTER -->
         <section class="secondaryContainer">
             <div class="newsletterSection">
                 <p class="newsletter__text">Restez connecté au monde de Tamriel ! Abonnez-vous à notre infolettre pour les dernières mises à jour, un contenu exclusif et des offres spéciales de The Elder Scrolls Online. Rejoignez notre communauté et embarquez dans des aventures épiques !</p>
-                <form id="formNewsletter" class="formNewsletter" action="">
+                <form id="formNewsletter" class="formNewsletter" action="#">
                     <div>
                         <label for="emailNewsletter" class="hidden">Courriel</label>
                         <input class="formNewsletter__email" type="email" id="emailNewsletter" name="emailNewsletter" placeholder="Courriel">
@@ -97,17 +92,11 @@
         </section>
 
 
-
-
-
-
         <!-- BANNER (BUY CROWNS) -->
         <section class="banner">
             <img src="images/buy-crowns.webp" alt="Amas de pièces de monnaie du jeu" loading="lazy">
             <a href="#" role="button" class="btn--brown">Acheter des Couronnes</a>
         </section>
-
-
 
 
         <!-- PRESENTATION -->
@@ -134,14 +123,11 @@
         </section>
 
 
-
-
-
         <!-- GRID PHOTOS -->
         <section>
             <div class="secondaryContainer">
                 <div class="gridContainer">
-                    <img class="grid__image1" src="images/grid-in-game-1.jpg" alt="Image en action durant le jeu"loading="lazy">
+                    <img class="grid__image1" src="images/grid-in-game-1.jpg" alt="Image en action durant le jeu" loading="lazy">
                     <img class="grid__image2" src="images/grid-in-game-2.jpg" alt="Image en action durant le jeu" loading="lazy">
                     <img class="grid__image3" src="images/grid-in-game-3.jpg" alt="Image en action durant le jeu" loading="lazy">
                     <img class="grid__image4" src="images/grid-in-game-4.webp" alt="Image en action durant le jeu" loading="lazy">
@@ -150,9 +136,6 @@
                 </div>
             </div>
         </section>
-
-
-
 
 
         <!-- STATS -->
@@ -179,9 +162,6 @@
                 </div>
             </div>
         </section>
-
-
-
 
 
         <!-- CARDS -->
@@ -265,8 +245,6 @@
         </section>
 
 
-
-
         <!-- MAP AND CONTACT FORM -->
         <section class="mapFormContainer">
             <div class="formContainer">
@@ -280,7 +258,7 @@
                                 <div class="formNamesContainer--left inputControl">
                                     <div class="inputControl--row">
                                         <label for="txtLastName" class="hidden">Nom de famille</label>
-                                        <input class="inputsContainer__input--left" id="txtLastName" name="lastName" type="text" placeholder="Nom de famille" min="2" max="50" required>
+                                        <input class="inputsContainer__input--left" id="txtLastName" name="lastName" type="text" placeholder="Nom de famille" minlength="2" maxlength="50" required>
                                         <span class="inputControl__required--leftOffset">*</span>
                                     </div>
                                     <div class="errorMessage"></div>
@@ -289,7 +267,7 @@
                                 <div class="formNamesContainer--right inputControl">
                                     <div class="inputControl--row">
                                         <label for="txtFirstName" class="hidden">Prénom</label>
-                                        <input class="inputsContainer__input" id="txtFirstName" name="firstName" type="text" placeholder="Prénom" min="2" max="50" required>
+                                        <input class="inputsContainer__input" id="txtFirstName" name="firstName" type="text" placeholder="Prénom" minlength="2" maxlength="50" required>
                                         <span class="inputControl__required">*</span>
                                     </div>
                                     <div class="errorMessage"></div>
@@ -300,7 +278,7 @@
                             <div class="inputControl">
                                 <div class="inputControl--row">
                                     <label for="email" class="hidden">Courriel</label>
-                                    <input class="inputsContainer__input" id="email" type="email" name="email" placeholder="Courriel" required>
+                                    <input class="inputsContainer__input" id="email" type="email" name="email" minlength="6" maxlength="100" placeholder="Courriel" required>
                                     <span class="inputControl__required">*</span>
                                 </div>
                                 <div class="errorMessage"></div>
@@ -310,7 +288,7 @@
                             <div class="inputControl">
                                 <div class="inputControl--row">
                                     <label for="txtMessage" class="hidden">Message</label>
-                                    <textarea class="inputsContainer__input" name="message" id="txtMessage" cols="30" rows="10" min="2" max="2000" placeholder="Message" required></textarea>
+                                    <textarea class="inputsContainer__input" name="message" id="txtMessage" cols="30" rows="10" minlength="2" maxlength="2000" placeholder="Message" required></textarea>
                                     <span class="inputControl__required">*</span>        
                                 </div>
                                 <div class="errorMessage"></div>
@@ -329,10 +307,7 @@
         <script src="scripts/script.js"></script>
     </main>
 
-
-
-
-
+    <!-- FOOTER -->
     <footer>
         <section class="primaryContainer footerMenu">
             <a href="index.html">

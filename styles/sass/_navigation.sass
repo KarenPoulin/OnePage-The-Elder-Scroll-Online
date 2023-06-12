@@ -1,6 +1,6 @@
 nav
     ul
-        @include displayFlexProperties(row)
+        @include displayFlexProperties(row, $alignItems: center)
         list-style-type: none
         a
             @extend %nav--elements
@@ -27,25 +27,26 @@ nav
     img
         max-width: 150px
 
-.navigation__itemWithIcon
-    @include displayFlexProperties(row)
-
-    img
-        width: 10px
-        object-fit: cover
-        margin-left: 6px
+.navigation__icon
+    width: 34px
+    object-fit: cover
 
 .navigation__hamburger
     display: none
 
-@media screen and (max-width: 1320px)
+
+
+@media screen and (max-width: 1360px)
     nav
         ul
+            @include displayFlexProperties(row, $alignItems: flex-start)
             a
                 padding-left: 1.4rem
                 font-size: 0.6rem
+    .navigation__icon
+        width: 24px
 
-@media screen and (max-width: 1110px)
+@media screen and (max-width: 1130px)
     nav
         ul
             a
@@ -58,7 +59,7 @@ nav
             max-width: 110px
 
 
-@media screen and (max-width: 920px)
+@media screen and (max-width: 935px)
     nav
         ul
             display: none
