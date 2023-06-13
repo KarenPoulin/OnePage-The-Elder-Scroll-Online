@@ -1,6 +1,7 @@
 .footer__logo
     margin-bottom: 1em
-    max-width: 240px
+    width: 240px
+    height: auto
 
 .footerMenu
     @include displayFlexProperties(column, flex-start, center)
@@ -69,7 +70,7 @@
 
 @media screen and (max-width: 1000px)
     .footer__logo
-        max-width: 200px
+        width: 200px
 
     .footer
         .footer_mediaIcons
@@ -82,7 +83,7 @@
 
 @media screen and (max-width: 900px)
     .footer__logo
-        max-width: 180px
+        width: 180px
 
     .footerMenu
         @include displayFlexProperties(column, flex-start, center)
